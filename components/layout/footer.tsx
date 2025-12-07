@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const Footer: React.FC = () => {
+const Footer = () => {
   const [email, setEmail] = useState('');
 
   const handleSubscribe = (e: React.FormEvent) => {

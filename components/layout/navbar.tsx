@@ -30,16 +30,19 @@ export default function Navbar() {
           </div>
 
           <div className="hidden items-center space-x-6 md:flex font-bold">
-            <Link href="/home" className="text-black hover:text-white">
+            <Link href="/home" className="text-black hover:text-black/60">
               Home
             </Link>
-            <Link href="/products" className="text-black hover:text-white">
+            <Link href="/solution" className="text-black hover:text-black/60">
+              Solution
+            </Link>
+            <Link href="/products" className="text-black hover:text-black/60">
               Products
             </Link>
-            <Link href="/about" className="text-black hover:text-white">
+            <Link href="/about" className="text-black hover:text-black/60">
               About Us
             </Link>
-            <Link href="/contact" className="text-black hover:text-white">
+            <Link href="/contact" className="text-black hover:text-black/60">
               Contact Us
             </Link>
           </div>
