@@ -1,7 +1,7 @@
 'use client';
 
 import React from "react";
-// import Hero from "@/components/landing/hero";
+import Hero from "@/components/landing/hero";
 import HomeProducts from "@/components/landing/homeproducts";
 import Years from "@/components/landing/years";
 import AllProducts from "@/components/landing/allproducts";
@@ -13,7 +13,7 @@ import Feedback from "@/components/layout/feedback";
 export default function Home() {
   return (
     <main>
-      {/* <Hero /> */}
+      <Hero /> 
       <HomeProducts />
       <Years />
       <AllProducts />
