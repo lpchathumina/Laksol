@@ -18,84 +18,84 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto">
         {/* Newsletter Section */}
         <div className="bg-gradient-to-r from-[#dcdcff] to-[#2323de] rounded-3xl p-8 md:p-12 mb-12 relative overflow-hidden">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            {/* Left Side - Image */}
-            <div className="relative h-48 md:h-64 flex items-center justify-center">
-              <Image
-                src="/footeri.png"
-                alt="Vacuum Cleaner"
-                width={520}
-                height={700}
-                className="object-contain"
-              />
-              {/* Sparkle decorations */}
-              <div className="absolute top-8 left-12 text-white text-2xl">✨</div>
-              <div className="absolute top-4 left-24 text-white text-xl">✨</div>
-              <div className="absolute bottom-12 left-8 text-white text-lg">✨</div>
-            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              {/* Left Side - Image */}
+              <div className="relative h-48 md:h-64 flex items-center justify-center">
+                <Image
+                  src="/footeri.png"
+                  alt="Vacuum Cleaner"
+                  width={520}
+                  height={700}
+                  className="object-contain"
+                />
+                {/* Sparkle decorations */}
+                <div className="absolute top-8 left-12 text-white text-2xl">✨</div>
+                <div className="absolute top-4 left-24 text-white text-xl">✨</div>
+                <div className="absolute bottom-12 left-8 text-white text-lg">✨</div>
+              </div>
 
-            {/* Right Side - Newsletter Form */}
-            <div className="text-white">
-              <h2 className="text-2xl md:text-3xl font-bold mb-3 leading-tight">
-                Subscribe to our newsletter to get updates to our latest collections
-              </h2>
-              <p className="text-blue-100 text-md mb-6">
-                Get 20% off on your first order just by subscribing to our newsletter
-              </p>
+              {/* Right Side - Newsletter Form */}
+              <div className="text-white">
+                <h2 className="text-2xl md:text-3xl font-bold mb-3 leading-tight">
+                  Subscribe to our newsletter to get updates to our latest collections
+                </h2>
+                <p className="text-blue-100 text-md mb-6">
+                  Get 20% off on your first order just by subscribing to our newsletter
+                </p>
 
-              <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3 mb-4">
-                <div className="flex-1 relative">
-                  <div className="absolute left-4 top-1/2 -translate-y-1/2">
-                    <svg
-                      className="w-5 h-5 text-gray-400"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                      />
-                    </svg>
+                <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3 mb-4">
+                  <div className="flex-1 relative">
+                    <div className="absolute left-4 top-1/2 -translate-y-1/2">
+                      <svg
+                        className="w-5 h-5 text-gray-400"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                        />
+                      </svg>
+                    </div>
+                    <input
+                      type="email"
+                      placeholder="Enter your email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="w-full pl-12 pr-4 py-3.5 rounded-xl bg-white/90 backdrop-blur-sm text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-white/50 text-sm"
+                      required
+                    />
                   </div>
-                  <input
-                    type="email"
-                    placeholder="Enter your email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="w-full pl-12 pr-4 py-3.5 rounded-xl bg-white/90 backdrop-blur-sm text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-white/50 text-sm"
-                    required
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="px-8 py-3.5 bg-white text-blue-600 rounded-xl font-semibold hover:bg-gray-50 transition-colors text-sm whitespace-nowrap"
-                >
-                  Subscribe
-                </button>
-              </form>
+                  <button
+                    type="submit"
+                    className="px-8 py-3.5 bg-white text-blue-600 rounded-xl font-semibold hover:bg-gray-50 transition-colors text-sm whitespace-nowrap"
+                  >
+                    Subscribe
+                  </button>
+                </form>
 
-              <p className="text-blue-100 text-sm">
-                You will be able to unsubscribe at any time.
-                <br />
-                Read our privacy policy{' '}
-                <Link href="#" className="underline hover:text-white">
-                  here
-                </Link>
-              </p>
+                <p className="text-blue-100 text-sm">
+                  You will be able to unsubscribe at any time.
+                  <br />
+                  Read our privacy policy{' '}
+                  <Link href="#" className="underline hover:text-white">
+                    here
+                  </Link>
+                </p>
+              </div>
             </div>
-          </div>
         </div>
 
         {/* Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 mb-8">
           {/* Logo and Description */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-4">
             <div className="flex items-center gap-1 mb-1">
               <div className="flex items-center justify-center">
-                <img src='/logo4.png' className='w-48 h-24' />
+                <img src='/logo4.png' className='w-48 h-24' alt="Logo" />
               </div>
             </div>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
@@ -113,7 +113,7 @@ const Footer = () => {
               </Link>
               <Link
                 href="#"
-                className=" flex items-center justify-center hover:bg-gray-50 transition-colors"
+                className="flex items-center justify-center hover:bg-gray-50 transition-colors"
               >
                 <Image src="/twitter.png" alt="Twitter" width={26} height={26} />
               </Link>
@@ -139,7 +139,7 @@ const Footer = () => {
           </div>
 
           {/* Company Links */}
-          <div>
+          <div className="lg:col-span-2 lg:col-start-6">
             <h3 className="font-semibold text-gray-900 mb-4 text-md">Company</h3>
             <ul className="space-y-3">
               <li>
@@ -166,7 +166,7 @@ const Footer = () => {
           </div>
 
           {/* Support Links */}
-          <div>
+          <div className="lg:col-span-2">
             <h3 className="font-semibold text-gray-900 mb-4 text-md">Support</h3>
             <ul className="space-y-3">
               <li>
@@ -193,7 +193,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Us */}
-          <div>
+          <div className="lg:col-span-3">
             <h3 className="font-semibold text-gray-900 mb-4 text-md">Contact Us</h3>
             <ul className="space-y-3">
               <li className="flex items-center gap-2">
