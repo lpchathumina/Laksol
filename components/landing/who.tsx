@@ -32,7 +32,7 @@ export default function WhoWeAre() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
         <h2 
-          className={`text-4xl md:text-5xl font-bold text-black text-center mb-16 uppercase tracking-wide transition-all duration-1000 ${
+          className={`text-3xl md:text-4xl font-bold text-black text-center mb-16 uppercase tracking-wide transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'
           }`}
         >
@@ -60,7 +60,7 @@ export default function WhoWeAre() {
 
               {/* Description Text */}
               <div className="space-y-6 lg:pr-16">
-                <p className="text-gray-900 text-base md:text-lg leading-relaxed">
+                <p className="text-black text-base md:text-md leading-relaxed">
                   An effective kitchen cleaning regimen should follow HACCP guidelines to properly clean and disinfect, especially food preparation areas. The key to containing
                 </p>
 
@@ -85,7 +85,7 @@ export default function WhoWeAre() {
               </div>
 
               {/* Bottom Image - Person washing dishes */}
-              <div className="w-full h-80 md:h-96 lg:h-80 rounded-3xl overflow-hidden lg:ml-auto lg:w-[95%]">
+              <div className="w-full h-80 md:h-96 lg:h-80 rounded-3xl overflow-hidden -ml-40">
                 <img 
                   src="/about.jpg" 
                   alt="Person washing dishes" 

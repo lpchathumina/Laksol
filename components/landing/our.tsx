@@ -29,28 +29,28 @@ export default function OurServices() {
 
   const services = [
     {
-      image: "/icons/service-1.svg",
-      title: "cumulative trading\nvolume to date"
+      image: "/help.gif",
+      title: "Expert Cleaning\nConsultation"
     },
     {
-      image: "/icons/service-2.svg",
-      title: "leading global and\nlocal crypto exchanges"
+      image: "/24.gif",
+      title: "24/7 Customer\nSupport"
     },
     {
-      image: "/icons/service-3.svg",
-      title: "Gravity Teammates\n(& growing)"
+      image: "/delivery.gif",
+      title: "Fast & Reliable\nDelivery"
     },
     {
-      image: "/icons/service-4.svg",
-      title: "of the global crypto\nspot trading volume"
+      image: "/people.gif",
+      title: "Trained Service\nProfessionals"
     },
     {
-      image: "/icons/service-5.svg",
-      title: "crypto-asset pairs"
+      image: "/Handshake.gif",
+      title: "Trusted Business\nPartnerships"
     },
     {
-      image: "/icons/service-6.svg",
-      title: "liquidity"
+      image: "/money.png",
+      title: "Competitive\nPricing"
     }
   ];
 
@@ -60,7 +60,7 @@ export default function OurServices() {
         {/* Section Heading */}
         <div className="text-center mb-8">
           <h2 
-            className={`text-4xl md:text-5xl font-bold text-blue-600 uppercase tracking-wide mb-8 transition-all duration-1000 ${
+            className={`text-3xl md:text-4xl font-bold text-black uppercase tracking-wide mb-8 transition-all duration-1000 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'
             }`}
           >
@@ -69,11 +69,11 @@ export default function OurServices() {
           
           {/* Description */}
           <p 
-            className={`text-gray-900 text-base md:text-lg leading-relaxed max-w-4xl mx-auto transition-all duration-1000 delay-200 ${
+            className={`text-gray-900 text-base md:text-md leading-relaxed max-w-5xl mx-auto transition-all duration-1000 delay-200 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'
             }`}
           >
-            An effective kitchen cleaning regimen should follow HACCP guidelines to properly clean and disinfect, especially food preparation areas. The key to containing restaurant cleaning expenditures is developing more effective cleaning procedures and using highly efficient products that won't compromise on the critical goal of food, customer and staff safety
+            At Lakmina Products, we go beyond manufacturing exceptional cleaning solutions. We provide comprehensive services designed to meet the unique needs of households, businesses, and industries. From expert consultation to reliable delivery, our commitment to quality extends to every aspect of customer experience.
           </p>
         </div>
 

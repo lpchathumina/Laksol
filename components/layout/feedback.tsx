@@ -8,43 +8,43 @@ const Feedback = () => {
     {
       name: 'Fatima Khoury',
       username: 'dilatory_curtains_98',
-      avatar: '/avatars/fatima.jpg',
+      image: '/user.png',
       text: "The progress tracker is fantastic. It's motivating to see how much I've improved over time. The app has a great mix of common and challenging words."
     },
     {
       name: 'Hassan Ali',
       username: 'turbulent_unicorn_29',
-      avatar: '/avatars/hassan.jpg',
+      image: '/user.png',
       text: "The progress tracker is fantastic. It's motivating to see how much I've improved over time. The app has a great mix of common and challenging words."
     },
     {
       name: 'Jorge Martinez',
       username: 'nefarious_jellybeans_91',
-      avatar: '/avatars/jorge.jpg',
+      image: '/user.png',
       text: "The progress tracker is fantastic. It's motivating to see how much I've improved over time. The app has a great mix of common and challenging words."
     },
     {
       name: 'Nicolás Sánchez',
       username: 'pervasive_inker_83',
-      avatar: '/avatars/nicolas.jpg',
+      image: '/user.png',
       text: "The progress tracker is fantastic. It's motivating to see how much I've improved over time. The app has a great mix of common and challenging words."
     },
     {
       name: 'Noel Jensen',
       username: 'nefarious_shop_47',
-      avatar: '/avatars/noel.jpg',
+      image: '/user.png',
       text: "The progress tracker is fantastic. It's motivating to see how much I've improved over time. The app has a great mix of common and challenging words."
     },
     {
       name: 'Ahmad Khan',
       username: 'antic_circus_76',
-      avatar: '/avatars/ahmad.jpg',
+      image: '/user.png',
       text: "The progress tracker is fantastic. It's motivating to see how much I've improved over time. The app has a great mix of common and challenging words."
     }
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-gray-50">
+    <section className="py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
@@ -90,7 +90,7 @@ const Feedback = () => {
               <div className="flex items-center gap-4">
                 <div className="relative w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
                   <Image
-                    src={testimonial.avatar}
+                    src={testimonial.image}
                     alt={testimonial.name}
                     fill
                     className="object-cover"
