@@ -39,3 +39,21 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# images
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.ico
+*.webp
+*.bmp
+*.tiff
+*.tif
+*.avif
+
+# image folders (optional - uncomment if you want to ignore entire folders)
+/public/images/
+/public/assets/
+/src/assets/images/
