@@ -68,7 +68,7 @@ function StatItem({ end, label, suffix = '', duration = 2000 }: StatItemProps) {
 
   return (
     <div ref={ref} className="flex flex-col items-center">
-      <div className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900">
+      <div className="text-5xl md:text-7xl font-bold text-gray-900">
         {count}
         {suffix}
       </div>

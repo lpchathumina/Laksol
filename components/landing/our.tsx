@@ -55,7 +55,7 @@ export default function OurServices() {
   ];
 
   return (
-    <section ref={sectionRef} className="py-16 md:py-24 bg-white">
+    <section ref={sectionRef} className="py-16 md:py-1 md:mt-20 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
         <div className="text-center mb-8">
@@ -93,7 +93,7 @@ export default function OurServices() {
                     <img 
                       src={service.image} 
                       alt={service.title} 
-                      className="w-16 h-16 object-contain"
+                      className="w-20 h-20 object-contain"
                     />
                   </div>
                   <p className="text-gray-900 text-sm font-medium leading-relaxed whitespace-pre-line">
@@ -129,7 +129,7 @@ export default function OurServices() {
                     <img 
                       src={service.image} 
                       alt={service.title} 
-                      className="w-16 h-16 object-contain"
+                      className="w-20 h-20 object-contain"
                     />
                   </div>
                   <p className="text-gray-900 text-sm font-medium leading-relaxed whitespace-pre-line">

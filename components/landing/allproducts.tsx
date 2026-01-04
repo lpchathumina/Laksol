@@ -4,14 +4,14 @@ import Image from 'next/image';
 
 export default function ServicesGrid() {
   return (
-    <div className="w-full min-h-screen flex items-center justify-center bg-gray-50 p-8">
+    <div className="w-full min-h-screen flex items-center justify-center bg-white p-8">
       <div className="max-w-[1280px] w-full">
         <div className="flex gap-4 flex-wrap md:flex-nowrap">
           {/* Left Column - Dishwash (Large) */}
-          <div className="w-full md:w-[300px] h-[380px]">
+          <div className="w-full md:w-[300px] h-[500px]">
             <div className="relative overflow-hidden rounded-3xl group cursor-pointer w-full h-full transition-all duration-500 hover:shadow-2xl hover:scale-[1.02]">
               <Image
-                src="/images/dishwash.jpg"
+                src="/dishwash.jpg"
                 alt="Dishwash"
                 fill
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-125"
@@ -27,10 +27,10 @@ export default function ServicesGrid() {
 
           {/* Middle Column - Handwash and Floor Care */}
           <div className="w-full md:w-[300px] flex flex-col gap-4">
-            <div className="w-full h-[180px]">
+            <div className="w-full h-[240px]">
               <div className="relative overflow-hidden rounded-3xl group cursor-pointer w-full h-full transition-all duration-500 hover:shadow-2xl hover:scale-[1.02]">
                 <Image
-                  src="/images/handwash.jpg"
+                  src="/handwash.jpg"
                   alt="Handwash"
                   fill
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-125"
@@ -43,10 +43,10 @@ export default function ServicesGrid() {
                 </div>
               </div>
             </div>
-            <div className="w-full h-[180px]">
+            <div className="w-full h-[240px]">
               <div className="relative overflow-hidden rounded-3xl group cursor-pointer w-full h-full transition-all duration-500 hover:shadow-2xl hover:scale-[1.02]">
                 <Image
-                  src="/images/floor-care.jpg"
+                  src="/floorcare.jpg"
                   alt="Floor Care"
                   fill
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-125"
@@ -63,10 +63,10 @@ export default function ServicesGrid() {
 
           {/* Right Column - Carwash and Degreasing */}
           <div className="w-full md:w-[300px] flex flex-col gap-4">
-            <div className="w-full h-[180px]">
+            <div className="w-full h-[240px]">
               <div className="relative overflow-hidden rounded-3xl group cursor-pointer w-full h-full transition-all duration-500 hover:shadow-2xl hover:scale-[1.02]">
                 <Image
-                  src="/images/carwash.jpg"
+                  src="/carwash.jpg"
                   alt="Carwash"
                   fill
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-125"
@@ -79,10 +79,10 @@ export default function ServicesGrid() {
                 </div>
               </div>
             </div>
-            <div className="w-full h-[180px]">
+            <div className="w-full h-[240px]">
               <div className="relative overflow-hidden rounded-3xl group cursor-pointer w-full h-full transition-all duration-500 hover:shadow-2xl hover:scale-[1.02]">
                 <Image
-                  src="/images/degreasing.jpg"
+                  src="/degreasing.jpg"
                   alt="Degreasing"
                   fill
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-125"
@@ -98,10 +98,10 @@ export default function ServicesGrid() {
           </div>
 
           {/* Far Right Column - Disinfectants (Large) */}
-          <div className="w-full md:w-[300px] h-[380px]">
+          <div className="w-full md:w-[300px] h-[500px]">
             <div className="relative overflow-hidden rounded-3xl group cursor-pointer w-full h-full transition-all duration-500 hover:shadow-2xl hover:scale-[1.02]">
               <Image
-                src="/images/disinfectants.jpg"
+                src="/disinfectants.jpg"
                 alt="Disinfectants"
                 fill
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-125"

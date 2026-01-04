@@ -90,12 +90,12 @@ const Footer = () => {
         </div>
 
         {/* Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 mb-4">
           {/* Logo and Description */}
           <div className="lg:col-span-4">
-            <div className="flex items-center gap-1 mb-1">
+            <div className="flex items-center gap-1 mb-4">
               <div className="flex items-center justify-center">
-                <img src='/logo4.png' className='w-48 h-24' alt="Logo" />
+                <img src='/logo4.png' className='h-8 w-30' alt="Logo" />
               </div>
             </div>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">

@@ -21,11 +21,11 @@ export default function Navbar() {
         scrolled ? "bg-black/10 backdrop-blur shadow-sm" : "bg-transparent",
       ].join(" ")}
     >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 md:px-0">
         <div className="flex h-20 items-center justify-between">
           <div className="flex items-center">
-            <Link href="/" className="text-xl font-bold text-black">
-              <img src="/logo1.png" alt="lalmina logo" className="h-10 w-auto" />
+            <Link href="/" >
+              <img src="/logo4.png" alt="lalmina logo" className="h-8 w-30" />
             </Link>
           </div>
 
