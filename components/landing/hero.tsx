@@ -30,7 +30,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative min-h-screen bg-white overflow-hidden">
+    <section ref={sectionRef} className="relative min-h-screen bg-gray-300 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
           {/* Left Side - Text Content */}
@@ -40,12 +40,12 @@ export default function HeroSection() {
             }`}
           >
             {/* Main Heading */}
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-blue-600 leading-tight uppercase">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-black leading-tight uppercase">
               WELCOME TO<br />LAKSOL
             </h1>
 
             {/* Subheading */}
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-blue-600 leading-tight">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-black leading-tight">
               8 Focus Areas For a Clean and<br />Sanitary Kitchen.
             </h2>
 
