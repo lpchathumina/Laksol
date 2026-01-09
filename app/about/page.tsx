@@ -176,7 +176,7 @@ const AboutUsPage = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative isolate h-[60vh] md:h-[70vh] overflow-hidden">
+      <section className="relative isolate h-[60vh] md:h-[90vh] overflow-hidden">
         <motion.div
           initial={{ scale: 1.08 }}
           animate={{ scale: 1 }}
@@ -184,7 +184,7 @@ const AboutUsPage = () => {
           className="absolute inset-0"
         >
           <Image
-            src="/handwash2.jpg"
+            src="/about_hero.jpg"
             alt="About Us - Lakmina Products"
             fill
             priority
@@ -203,7 +203,7 @@ const AboutUsPage = () => {
           >
             <motion.h1 
               variants={heroShow} 
-              className="text-white text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight"
+              className="text-white text-4xl sm:text-5xl md:text-6xl md:mt-24 font-bold tracking-tight leading-tight"
             >
               ABOUT US
             </motion.h1>

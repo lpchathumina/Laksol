@@ -3,7 +3,46 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import Book from '@/components/layout/book';
+
+// --- ANIMATION VARIANTS ---
+
+// Hero Text Animations
+const heroList = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.2, delayChildren: 0.3 }
+  }
+};
+
+const heroShow = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+};
+
+// Social Sidebar Animations
+const sidebarContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 1.0 // Starts after the main text appears
+    }
+  }
+};
+
+const sidebarItem = {
+  hidden: { opacity: 0, x: 20 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.5 } }
+};
+
+const lineGrow = {
+  hidden: { height: 0 },
+  visible: { height: '4rem', transition: { duration: 0.8, ease: "easeInOut" } }
+};
 
 const Solution = () => {
   // State for kitchen image markers section
@@ -56,99 +95,120 @@ const Solution = () => {
   ];
 
   const products = [
-    {
-      id: 1,
-      name: 'Product Name',
-      description: 'Antibacterial 2X5L',
-      image: '/products/purple-bottle-1.png'
-    },
-    {
-      id: 2,
-      name: 'Product Name',
-      description: 'Antibacterial 2X5L',
-      image: '/products/purple-bottle-2.png'
-    },
-    {
-      id: 3,
-      name: 'Product Name',
-      description: 'Antibacterial 2X5L',
-      image: '/products/purple-bottle-3.png'
-    }
+    { id: 1, name: 'Product Name', description: 'Antibacterial 2X5L', image: '/products/purple-bottle-1.png' },
+    { id: 2, name: 'Product Name', description: 'Antibacterial 2X5L', image: '/products/purple-bottle-2.png' },
+    { id: 3, name: 'Product Name', description: 'Antibacterial 2X5L', image: '/products/purple-bottle-3.png' }
   ];
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative h-[400px] md:h-[500px] lg:h-[400px] overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0">
+      {/* --- HERO SECTION --- */}
+      <section className="relative isolate h-[60vh] md:h-[90vh] overflow-hidden bg-black">
+        
+        {/* Background Image with Zoom Effect */}
+        <motion.div
+          initial={{ scale: 1.1 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+          className="absolute inset-0 z-0"
+        >
           <Image
-            src="/about.jpg"
-            alt="About Us Background"
+            src="/solution_hero.jpg"
+            alt="Solutions Background"
             fill
             priority
-            className="object-cover object-center"
+            className="object-cover object-center opacity-70"
           />
-        </div>
+        </motion.div>
 
-        {/* Content */}
-        <div className="relative h-full flex items-center">
-          <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
-            {/* About Us Badge */}
-            <div className="inline-flex items-center">
-              <div className="relative mt-100">
-                <div className="bg-gray-700/80 backdrop-blur-sm px-8 py-4 flex items-center">
-                  <span className="text-white text-2xl md:text-3xl font-bold tracking-wide">
-                    SOLUTION
-                  </span>
-                </div>
-                {/* Arrow pointing right */}
-                <div className="absolute right-0 top-0 h-full w-0 border-t-[28px] md:border-t-[32px] border-b-[28px] md:border-b-[32px] border-l-[20px] md:border-l-[24px] border-t-transparent border-b-transparent border-l-gray-700/80 translate-x-full" />
-              </div>
-            </div>
-          </div>
-        </div>
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/80 z-10" />
 
-        {/* Social Media Icons - Right Side */}
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 flex flex-col items-center gap-4 pr-6 md:pr-8 mr-20 mt-10">
-          {/* Vertical Line */}
-          <div className="w-0.5 h-16 bg-gray-800" />
+        {/* Centered Content */}
+        <div className="relative z-20 mx-auto flex h-full max-w-7xl flex-col justify-center px-6 sm:px-8">
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={heroList}
+            className="text-center"
+          >
+            <motion.h1 
+              variants={heroShow} 
+              className="text-white text-4xl sm:text-5xl md:text-6xl md:mt-24 font-bold tracking-tight leading-tight"
+            >
+              CLEANING SOLUTIONS
+            </motion.h1>
+
+            <motion.p 
+              variants={heroShow} 
+              className="mt-4 max-w-xl mx-auto text-white/90 text-base md:text-lg leading-relaxed"
+            >
+              Effective cleaning regimens and high-efficiency products for a safer environment.
+            </motion.p>
+          </motion.div>
+        </div> 
+
+        {/* --- SOCIAL MEDIA ICONS (RIGHT SIDE) --- */}
+        <motion.div 
+          className="absolute right-0 top-1/2 -translate-y-1/2 z-30 flex flex-col items-center gap-4 pr-6 md:pr-8 mr-4 md:mr-10"
+          initial="hidden"
+          animate="visible"
+          variants={sidebarContainer}
+        >
+          {/* Animated Vertical Line */}
+          <motion.div 
+            variants={lineGrow} 
+            className="w-0.5 bg-white/80 shadow-[0_0_10px_rgba(255,255,255,0.5)]" 
+          />
           
           {/* Facebook Icon */}
-          <Link
-            href="#"
-            className="w-12 h-12 rounded-full bg-white flex items-center justify-center hover:bg-gray-100 transition-colors shadow-lg"
-            aria-label="Facebook"
-          >
-            <Image src="/icons/facebook.svg" alt="Facebook" width={24} height={24} />
-          </Link>
+          <motion.div variants={sidebarItem}>
+            <Link
+              href="#"
+              className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center hover:bg-white hover:scale-110 transition-all duration-300 group shadow-lg"
+              aria-label="Facebook"
+            >
+              <Image 
+                src="/icons/facebook.svg" 
+                alt="Facebook" 
+                width={24} 
+                height={24} 
+                className="brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-all duration-300"
+              />
+            </Link>
+          </motion.div>
 
           {/* WhatsApp Icon */}
-          <Link
-            href="#"
-            className="w-12 h-12 rounded-full bg-white flex items-center justify-center hover:bg-gray-100 transition-colors shadow-lg"
-            aria-label="WhatsApp"
-          >
-            <Image src="/icons/whatsapp.svg" alt="WhatsApp" width={24} height={24} />
-          </Link>
+          <motion.div variants={sidebarItem}>
+            <Link
+              href="#"
+              className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center hover:bg-white hover:scale-110 transition-all duration-300 group shadow-lg"
+              aria-label="WhatsApp"
+            >
+              <Image 
+                src="/icons/whatsapp.svg" 
+                alt="WhatsApp" 
+                width={24} 
+                height={24} 
+                className="brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-all duration-300"
+              />
+            </Link>
+          </motion.div>
 
-          {/* Down Arrow */}
-          <div className="mt-4">
-            <svg
-              className="w-6 h-6 text-gray-800 animate-bounce"
+          {/* Animated Down Arrow */}
+          <motion.div variants={sidebarItem} className="mt-4">
+            <motion.svg
+              animate={{ y: [0, 8, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+              className="w-6 h-6 text-white drop-shadow-lg"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M19 14l-7 7m0 0l-7-7m7 7V3"
-              />
-            </svg>
-          </div>
-        </div>
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </motion.svg>
+          </motion.div>
+        </motion.div>
       </section>
 
       {/* Kitchen Focus Areas Section */}
@@ -157,7 +217,7 @@ const Solution = () => {
           {/* Top Description */}
           <div className="text-center mb-12">
             <p className="text-gray-900 text-base md:text-lg leading-relaxed max-w-5xl mx-auto mb-8">
-              An effective kitchen cleaning regimen should follow HACCP guidelines to properly clean and disinfect, especially food preparation areas. The key to containing restaurant cleaning expenditures is developing more effective cleaning procedures and using highly efficient products that won't compromise on the critical goal of food, customer and staff safety
+              An effective kitchen cleaning regimen should follow HACCP guidelines to properly clean and disinfect, especially food preparation areas. The key to containing restaurant cleaning expenditures is developing more effective cleaning procedures and using highly efficient products that won&apos;t compromise on the critical goal of food, customer and staff safety
             </p>
 
             <h2 className="text-3xl md:text-4xl font-bold text-blue-600 mb-4">
@@ -211,7 +271,7 @@ const Solution = () => {
           {/* Bottom Description */}
           <div className="text-center mt-8">
             <p className="text-gray-900 text-base md:text-lg leading-relaxed max-w-5xl mx-auto">
-              It's recommended to clean ovens weekly. Make sure the oven has cooled completely before attempting to clean.
+              It&apos;s recommended to clean ovens weekly. Make sure the oven has cooled completely before attempting to clean.
             </p>
           </div>
         </div>
