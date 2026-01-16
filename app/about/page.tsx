@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Target, Eye, Heart, ShieldCheck } from 'lucide-react';
+// import GrowUp from '@/components/layout/growup';
 import Book from '@/components/layout/book';
 import Feedback from '@/components/layout/feedback';
 import Clients from '@/components/layout/client';
@@ -68,33 +69,33 @@ const Counter = ({ end, duration = 2000, suffix = '', decimals = 0 }: CounterPro
   );
 };
 
-const timelineData = [
-  {
-    year: '2010',
-    iconSrc: '/icons/trending-up.svg',
-    description: 'Founded Lakmina Products with a vision to revolutionize cleaning solutions in Sri Lanka.'
-  },
-  {
-    year: '2015',
-    iconSrc: '/icons/users.svg',
-    description: 'Expanded our team to 50+ employees and launched our flagship bathroom cleaning range.'
-  },
-  {
-    year: '2018',
-    iconSrc: '/icons/building.svg',
-    description: 'Opened our state-of-the-art manufacturing facility in Ratmalana Industrial Zone.'
-  },
-  {
-    year: '2022',
-    iconSrc: '/icons/bar-chart.svg',
-    description: 'Achieved 100+ distributor partnerships across Sri Lanka and entered export markets.'
-  },
-  {
-    year: '2026',
-    iconSrc: '/icons/clipboard.svg',
-    description: 'Continuing innovation with eco-friendly formulations and sustainable packaging.'
-  }
-];
+// const timelineData = [
+//   {
+//     year: '2010',
+//     iconSrc: '/icons/trending-up.svg',
+//     description: 'Founded Lakmina Products with a vision to revolutionize cleaning solutions in Sri Lanka.'
+//   },
+//   {
+//     year: '2015',
+//     iconSrc: '/icons/users.svg',
+//     description: 'Expanded our team to 50+ employees and launched our flagship bathroom cleaning range.'
+//   },
+//   {
+//     year: '2018',
+//     iconSrc: '/icons/building.svg',
+//     description: 'Opened our state-of-the-art manufacturing facility in Ratmalana Industrial Zone.'
+//   },
+//   {
+//     year: '2022',
+//     iconSrc: '/icons/bar-chart.svg',
+//     description: 'Achieved 100+ distributor partnerships across Sri Lanka and entered export markets.'
+//   },
+//   {
+//     year: '2026',
+//     iconSrc: '/icons/clipboard.svg',
+//     description: 'Continuing innovation with eco-friendly formulations and sustainable packaging.'
+//   }
+// ];
 
 const coreValuesSections = [
   {
@@ -233,15 +234,15 @@ const AboutUsPage = () => {
 
       {/* Social Media Icons - Right Side */}
       <section className="relative">
-        <div className="absolute right-0 top-0 -translate-y-1/2 flex flex-col items-center gap-4 pr-6 md:pr-8 z-20">
-          <div className="w-0.5 h-16 bg-gray-800" />
+        <div className="absolute right-0 -top-40 -translate-y-1/2 flex flex-col items-center gap-4 pr-6 md:pr-8 z-20">
+          <div className="w-0.5 h-16 bg-white" />
           
           <Link
             href="#"
             className="w-12 h-12 rounded-full bg-white flex items-center justify-center hover:bg-gray-100 transition-colors shadow-lg"
             aria-label="Facebook"
           >
-            <Image src="/icons/facebook.svg" alt="Facebook" width={24} height={24} />
+            <Image src="/facebook3.png" alt="Facebook" width={28} height={28} />
           </Link>
 
           <Link
@@ -249,12 +250,12 @@ const AboutUsPage = () => {
             className="w-12 h-12 rounded-full bg-white flex items-center justify-center hover:bg-gray-100 transition-colors shadow-lg"
             aria-label="WhatsApp"
           >
-            <Image src="/icons/whatsapp.svg" alt="WhatsApp" width={24} height={24} />
+            <Image src="/whatsapp1.png" alt="WhatsApp" width={28} height={28} />
           </Link>
 
           <div className="mt-4">
             <svg
-              className="w-6 h-6 text-gray-800 animate-bounce"
+              className="w-6 h-6 text-white animate-bounce"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -293,7 +294,7 @@ const AboutUsPage = () => {
               </h2>
 
               <p 
-                className={`text-xl md:text-2xl lg:text-3xl text-gray-700 leading-relaxed font-light italic transition-all duration-700 ${
+                className={`text-md md:text-3xl text-black leading-relaxed font-light italic transition-all duration-700 ${
                   isVisible 
                     ? 'opacity-100 translate-y-0' 
                     : 'opacity-0 translate-y-8'
@@ -302,20 +303,11 @@ const AboutUsPage = () => {
               >
                 We carry a passion for quality cleaning solutions and have a knack for delivering products that exceed expectations.
               </p>
-
-              <div 
-                className={`w-16 h-1 bg-gray-300 mt-8 transition-all duration-700 ${
-                  isVisible 
-                    ? 'opacity-100 scale-x-100' 
-                    : 'opacity-0 scale-x-0'
-                }`}
-                style={{ transitionDelay: '500ms', transformOrigin: 'left' }}
-              />
             </div>
 
             <div className="space-y-6 lg:pt-4">
               <p 
-                className={`text-gray-500 text-base md:text-lg leading-relaxed transition-all duration-700 ${
+                className={`text-black text-base md:text-lg leading-relaxed transition-all duration-700 ${
                   isVisible 
                     ? 'opacity-100 translate-y-0' 
                     : 'opacity-0 translate-y-8'
@@ -326,7 +318,7 @@ const AboutUsPage = () => {
               </p>
 
               <p 
-                className={`text-gray-500 text-base md:text-lg leading-relaxed transition-all duration-700 ${
+                className={`text-black  text-base md:text-lg leading-relaxed transition-all duration-700 ${
                   isVisible 
                     ? 'opacity-100 translate-y-0' 
                     : 'opacity-0 translate-y-8'
@@ -337,7 +329,7 @@ const AboutUsPage = () => {
               </p>
 
               <p 
-                className={`text-gray-500 text-base md:text-lg leading-relaxed transition-all duration-700 ${
+                className={`text-black text-base md:text-lg leading-relaxed transition-all duration-700 ${
                   isVisible 
                     ? 'opacity-100 translate-y-0' 
                     : 'opacity-0 translate-y-8'
@@ -351,87 +343,89 @@ const AboutUsPage = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="bg-white py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            
-            <div className="lg:col-span-3">
-              <div className="space-y-0">
-                <div className="text-center py-6 border-b border-gray-200">
-                  <div className="text-4xl md:text-5xl font-bold text-gray-300 mb-1">
-                    <Counter end={20.5} suffix="k" decimals={1} />
-                  </div>
-                  <div className="text-gray-500 text-sm">Successfully Delivered</div>
-                </div>
-
-                <div className="text-center py-6 border-b border-gray-200">
-                  <div className="text-4xl md:text-5xl font-bold text-gray-300 mb-1">
-                    <Counter end={450} suffix="+" />
-                  </div>
-                  <div className="text-gray-500 text-sm">Happy Customers</div>
-                </div>
-
-                <div className="text-center py-6">
-                  <div className="text-4xl md:text-5xl font-bold text-gray-300 mb-1">
-                    <Counter end={14} suffix="+" />
-                  </div>
-                  <div className="text-gray-500 text-sm">Years Experience</div>
-                </div>
+        {/* Stats Section */}
+        <section className="bg-white py-10 md:py-10 mb-40">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+        
+        <div className="lg:col-span-3">
+          <div className="space-y-0">
+            <div className="text-center py-6 border-b border-gray-200">
+              <div className="text-4xl md:text-5xl font-bold text-black mb-1">
+                <Counter end={20.5} suffix="k" decimals={1} />
               </div>
+              <div className="text-gray-500 text-sm">Successfully Delivered</div>
             </div>
 
-            <div className="lg:col-span-5">
-              <div className="relative">
-                <div className="relative w-full h-[350px] md:h-[450px] rounded-2xl overflow-hidden shadow-xl mt-8 lg:mt-0">
-                  <Image
-                    src="/12345.jpg"
-                    alt="Lakmina Products Team"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+            <div className="text-center py-6 border-b border-gray-200">
+              <div className="text-4xl md:text-5xl font-bold text-black mb-1">
+                <Counter end={450} suffix="+" />
               </div>
+              <div className="text-gray-500 text-sm">Happy Customers</div>
             </div>
 
-            <div className="lg:col-span-4 space-y-6">
-              <div className="flex items-center gap-2">
-                <svg className="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-                </svg>
-                <span className="text-blue-600 text-sm font-medium tracking-wider uppercase">About Company</span>
+            <div className="text-center py-6">
+              <div className="text-4xl md:text-5xl font-bold text-black mb-1">
+                <Counter end={14} suffix="+" />
               </div>
-
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                Quality products & their best solutions
-              </h2>
-
-              <p className="text-gray-500 text-base leading-relaxed">
-                Our comprehensive range of cleaning products is designed to tackle every cleaning challenge. From powerful bathroom cleaners to gentle surface sprays, each product is formulated with care and precision to deliver exceptional results.
-              </p>
-
-              <div>
-                <Link
-                  href="/products"
-                  className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-full transition-all duration-300 group"
-                >
-                  <span>Read More</span>
-                  <svg 
-                    className="w-4 h-4 group-hover:translate-x-1 transition-transform" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </Link>
-              </div>
+              <div className="text-gray-500 text-sm">Years Experience</div>
             </div>
           </div>
         </div>
-      </section>
 
-      {/* Timeline Section */}
+        <div className="lg:col-span-5">
+          <div className="relative">
+            <div className="relative w-full h-[350px] md:h-[450px] rounded-2xl overflow-hidden shadow-xl mt-8 lg:mt-0">
+              <Image
+                src="/12345.jpg"
+                alt="Lakmina Products Team"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="lg:col-span-4 lg:mt-26 space-y-6 ">
+          <div className="flex items-center gap-2">
+            <svg className="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+            </svg>
+            <span className="text-blue-600 text-sm font-medium tracking-wider uppercase">About Company</span>
+          </div>
+
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+            Quality products & their best solutions
+          </h2>
+
+          <p className="text-black text-base leading-relaxed">
+            Our comprehensive range of cleaning products is designed to tackle every cleaning challenge. From powerful bathroom cleaners to gentle surface sprays, each product is formulated with care and precision to deliver exceptional results.
+          </p>
+
+          <div>
+            <Link
+              href="/products"
+              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-full transition-all duration-300 group"
+            >
+              <span>Read More</span>
+              <svg 
+                className="w-4 h-4 group-hover:translate-x-1 transition-transform" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+      {/* <GrowUp /> */}
+
+      {/* Timeline Section
       <section className="bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16">
@@ -493,7 +487,7 @@ const AboutUsPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Core Values Scroll Section */}
       <section className="relative w-full bg-white">
@@ -509,31 +503,6 @@ const AboutUsPage = () => {
                 className="object-cover transition-opacity duration-500"
                 priority
               />
-              <div className="absolute inset-0 bg-white/10" />
-            </div>
-
-            <div className="relative z-10 pt-20 pl-8 md:pl-16">
-              <div className="flex items-start">
-                <div className="flex flex-col">
-                  <h2 className="text-5xl md:text-7xl font-bold text-gray-900 leading-tight">
-                    OUR <span className="text-3xl md:text-4xl font-normal text-gray-700 block -mb-2 mt-1">Core</span>
-                    VALUES
-                  </h2>
-                </div>
-                
-                <div className="hidden lg:block ml-4 mt-4">
-                  <svg width="100" height="120" viewBox="0 0 100 120" fill="none" className="text-gray-900">
-                    <path d="M10 10 H 60 C 80 10, 80 30, 80 50 V 100" stroke="currentColor" strokeWidth="2" fill="none" />
-                    <path d="M 75 95 L 80 105 L 85 95" stroke="currentColor" strokeWidth="2" fill="none" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative z-10 pb-12 pl-8 md:pl-16 pr-8 max-w-md">
-              <p className="text-gray-900 font-medium text-sm md:text-base backdrop-blur-sm bg-white/30 p-4 rounded-xl border border-white/20">
-                Scroll down to explore how our core values shape our mission and vision for a cleaner future.
-              </p>
             </div>
           </div>
 
@@ -558,7 +527,7 @@ const AboutUsPage = () => {
                   >
                     <div className="flex flex-col gap-6">
                       <div className="flex items-center gap-4">
-                        <div className="p-3 bg-white rounded-full shadow-sm">
+                        <div className=" shadow-sm backdrop-blur-sm bg-white/30 p-4 rounded-xl border border-white/20">
                           <section.icon className="w-8 h-8 text-gray-900" strokeWidth={1.5} />
                         </div>
                         <h3 className="text-3xl md:text-4xl font-light text-gray-900 tracking-wide uppercase">
@@ -568,12 +537,8 @@ const AboutUsPage = () => {
                       
                       <div className="h-px w-full bg-gray-300" />
                       
-                      <p className="text-gray-600 leading-relaxed text-lg">
+                      <p className="text-gray-900 font-medium leading-relaxed">
                         {section.description}
-                      </p>
-                      
-                      <p className="text-xs text-gray-400 mt-4 font-mono">
-                        0{index + 1} / 04
                       </p>
                     </div>
                   </div>
