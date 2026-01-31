@@ -9,6 +9,7 @@ import { Target, Eye, Heart, ShieldCheck } from 'lucide-react';
 import Book from '@/components/layout/book';
 import Feedback from '@/components/layout/feedback';
 import Clients from '@/components/layout/client';
+import { Variants } from 'framer-motion';
 
 interface CounterProps {
   end: number;
@@ -136,14 +137,14 @@ const AboutUsPage = () => {
     hidden: {}
   };
 
-  const heroShow = {
+  const heroShow: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
+        ease: "easeOut" as const
       }
     }
   };
@@ -198,7 +199,7 @@ const AboutUsPage = () => {
           className="absolute inset-0"
         >
           <Image
-            src="/about_hero.jpg"
+            src="/aboutus1_hero.jpg"
             alt="About Us - Lakmina Products"
             fill
             priority
@@ -206,7 +207,7 @@ const AboutUsPage = () => {
           />
         </motion.div>
 
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/30" />
 
         <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-center px-6 sm:px-8">
           <motion.div

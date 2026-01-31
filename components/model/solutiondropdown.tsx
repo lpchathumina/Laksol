@@ -47,22 +47,22 @@ export default function SolutionDropdown({ isOpen, onClose }: SolutionDropdownPr
                   </h3>
                   <ul className="space-y-4">
                     <li>
-                      <Link href="/solutions/care-homes" onClick={onClose} className={linkStyle}>
+                      <Link href="/solutions/by-industry/care-homes" onClick={onClose} className={linkStyle}>
                         Care Homes
                       </Link>
                     </li>
                     <li>
-                      <Link href="/solutions/accommodation" onClick={onClose} className={linkStyle}>
+                      <Link href="/solutions/by-industry/accommodation" onClick={onClose} className={linkStyle}>
                         Accommodation
                       </Link>
                     </li>
                     <li>
-                      <Link href="/solutions/restaurants" onClick={onClose} className={linkStyle}>
+                      <Link href="/solutions/by-industry/restaurants-bars-cafes" onClick={onClose} className={linkStyle}>
                         Restaurants/Bars/Cafes
                       </Link>
                     </li>
                     <li>
-                      <Link href="/solutions/facilities" onClick={onClose} className={linkStyle}>
+                      <Link href="/solutions/by-industry/facilities" onClick={onClose} className={linkStyle}>
                         Facilities
                       </Link>
                     </li>
@@ -76,17 +76,17 @@ export default function SolutionDropdown({ isOpen, onClose }: SolutionDropdownPr
                   </h3>
                   <ul className="space-y-4">
                     <li>
-                      <Link href="/solutions/bathroom" onClick={onClose} className={linkStyle}>
+                      <Link href="/solutions/by-cleaning-area/bathroom-cleaning" onClick={onClose} className={linkStyle}>
                         Bathroom Cleaning
                       </Link>
                     </li>
                     <li>
-                      <Link href="/solutions/kitchen" onClick={onClose} className={linkStyle}>
+                      <Link href="/solutions/by-cleaning-area/kitchen-cleaning" onClick={onClose} className={linkStyle}>
                         Kitchen Cleaning
                       </Link>
                     </li>
                     <li>
-                      <Link href="/solutions/laundry" onClick={onClose} className={linkStyle}>
+                      <Link href="/solutions/by-cleaning-area/laundry-cleaning" onClick={onClose} className={linkStyle}>
                         Laundry Cleaning
                       </Link>
                     </li>

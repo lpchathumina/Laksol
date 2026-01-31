@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Facebook, Twitter, Linkedin, Youtube } from 'lucide-react';
+import { Variants } from 'framer-motion';
 
 const ContactUs: React.FC = () => {
   const [heroLoaded, setHeroLoaded] = useState(false);
@@ -33,14 +34,14 @@ const ContactUs: React.FC = () => {
     hidden: {}
   };
 
-  const heroShow = {
+  const heroShow: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
+        ease: "easeOut" as const
       }
     }
   };
@@ -57,14 +58,14 @@ const ContactUs: React.FC = () => {
     }
   };
 
-  const contentItem = {
+  const contentItem: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
+        ease: "easeOut" as const
       }
     }
   };
@@ -93,7 +94,7 @@ const ContactUs: React.FC = () => {
           className="absolute inset-0"
         >
           <Image
-            src="/contact_hero.jpg"
+            src="/contactus1_hero.jpg"
             alt="Contact Us"
             fill
             priority
