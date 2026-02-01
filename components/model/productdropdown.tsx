@@ -31,16 +31,16 @@ export default function ProductsDropdown({ isOpen, onClose }: ProductsDropdownPr
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 bg-black/10 backdrop-blur-[2px] z-40"
+            className="fixed inset-0 z-40"
           />
 
-          {/* Dropdown Panel */}
+          {/* Dropdown Panel - positioned directly below the button */}
           <motion.div
-            initial={{ opacity: 0, y: -10, scale: 0.98 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: -10, scale: 0.98 }}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 10 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
-            className="fixed left-1/2 -translate-x-1/2 top-28 z-50"
+            className="absolute top-full left-0 mt-10 z-50"
           >
             <div 
               className="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden min-w-[280px]"

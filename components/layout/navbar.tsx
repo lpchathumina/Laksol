@@ -24,6 +24,7 @@ export default function Navbar() {
     const handleEscape = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         setIsProductsOpen(false);
+        setIsSolutionOpen(false);
       }
     };
 
@@ -50,43 +51,61 @@ export default function Navbar() {
           <div className="hidden md:flex flex-1 items-center justify-start gap-8">
             <NavLink href="/">Home</NavLink>
 
-            {/* Solution Button */}
-            <button
-              onClick={() => setIsSolutionOpen(!isSolutionOpen)}
-              className="relative group text-sm font-bold text-black uppercase tracking-widest hover:text-[#2727f6] transition-colors duration-300 flex items-center gap-1"
-            >
-              Solutions
-              {/* The Expanding Underline Animation */}
-              <svg 
-                className={`w-4 h-4 transition-transform duration-300 ${isSolutionOpen ? 'rotate-180' : ''}`} 
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24"
+            {/* Solution Button - Relative Container */}
+            <div className="relative">
+              <button
+                onClick={() => {
+                  setIsSolutionOpen(!isSolutionOpen);
+                  setIsProductsOpen(false);
+                }}
+                className="relative group text-sm font-bold text-black uppercase tracking-widest hover:text-[#2727f6] transition-colors duration-300 flex items-center gap-1"
               >
-                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /> 
-              </svg>
-              
-              <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#2727f6] group-hover:w-full transition-all duration-500 ease-out"></span>
-            </button>
+                Solutions
+                <svg 
+                  className={`w-4 h-4 transition-transform duration-300 ${isSolutionOpen ? 'rotate-180' : ''}`} 
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /> 
+                </svg>
+                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#2727f6] group-hover:w-full transition-all duration-500 ease-out"></span>
+              </button>
 
-            {/* Products Button */}
-            <button
-              onClick={() => setIsProductsOpen(!isProductsOpen)}
-              className="relative group text-sm font-bold text-black uppercase tracking-widest hover:text-[#2727f6] transition-colors duration-300 flex items-center gap-1"
-            >
-              Products
-              {/* The Expanding Underline Animation */}
-              <svg 
-                className={`w-4 h-4 transition-transform duration-300 ${isProductsOpen ? 'rotate-180' : ''}`} 
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24"
+              {/* Solutions Dropdown - Positioned directly below button */}
+              <SolutionDropdown 
+                isOpen={isSolutionOpen} 
+                onClose={() => setIsSolutionOpen(false)} 
+              />
+            </div>
+
+            {/* Products Button - Relative Container */}
+            <div className="relative">
+              <button
+                onClick={() => {
+                  setIsProductsOpen(!isProductsOpen);
+                  setIsSolutionOpen(false);
+                }}
+                className="relative group text-sm font-bold text-black uppercase tracking-widest hover:text-[#2727f6] transition-colors duration-300 flex items-center gap-1"
               >
-                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /> 
-              </svg>
-              
-              <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#2727f6] group-hover:w-full transition-all duration-500 ease-out"></span>
-            </button>
+                Products
+                <svg 
+                  className={`w-4 h-4 transition-transform duration-300 ${isProductsOpen ? 'rotate-180' : ''}`} 
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /> 
+                </svg>
+                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#2727f6] group-hover:w-full transition-all duration-500 ease-out"></span>
+              </button>
+
+              {/* Products Dropdown - Positioned directly below button */}
+              <ProductsDropdown 
+                isOpen={isProductsOpen} 
+                onClose={() => setIsProductsOpen(false)} 
+              />
+            </div>
           </div>
 
           {/* --- MIDDLE LOGO --- */}
@@ -151,18 +170,6 @@ export default function Navbar() {
           )}
         </nav>
       </header>
-
-      {/* Products Dropdown Modal */}
-      <ProductsDropdown 
-        isOpen={isProductsOpen} 
-        onClose={() => setIsProductsOpen(false)} 
-      />
-
-      {/* Solutions Dropdown Modal */}
-      <SolutionDropdown 
-        isOpen={isSolutionOpen} 
-        onClose={() => setIsSolutionOpen(false)} 
-      />
     </>
   );
 }
@@ -175,7 +182,6 @@ function NavLink({ href, children }: { href: string; children: React.ReactNode }
       className="relative group text-sm font-bold text-black uppercase tracking-widest hover:text-[#2727f6] transition-colors duration-300"
     >
       {children}
-      {/* The Expanding Underline Animation */}
       <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#2727f6] group-hover:w-full transition-all duration-500 ease-out"></span>
     </Link>
   );

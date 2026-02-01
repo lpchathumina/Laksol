@@ -1,10 +1,9 @@
 'use client';
 
-import React , { useState } from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { motion, Variants } from 'framer-motion';
-import { Eye, ShoppingBag } from 'lucide-react';
-import { ChevronRight } from 'lucide-react';
+import { Eye } from 'lucide-react';
 
 const heroList: Variants = {
   visible: {
@@ -134,7 +133,7 @@ export default function KitchenCleaningPage() {
         </div> 
       </section>
 
-       <section className="py-16 px-6">
+      <section className="py-16 px-6">
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-black text-lg leading-relaxed">
             Bathrooms are often reported as one of the most difficult and most important 
@@ -165,7 +164,7 @@ export default function KitchenCleaningPage() {
           <div className="flex flex-col lg:flex-row gap-8">
             {/* Sidebar Navigation */}
             <div className="lg:w-56 flex-shrink-0">
-              <nav className="space-y-1 ">
+              <nav className="space-y-1">
                 {focusAreas.map((area) => (
                   <button
                     key={area.id}
@@ -227,60 +226,71 @@ export default function KitchenCleaningPage() {
       </section>
 
       {/* Products Section */}
-      <section className="py-12 px-6 bg-white max-w-4xl mx-auto md:ml-110">
+      <section className="pb-16 px-6 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-col lg:flex-row gap-10">
+            {/* Empty space to match sidebar */}
+            <div className="lg:w-56 flex-shrink-0 hidden lg:block"></div>
+            
+            {/* Products Grid - aligned with illustration */}
+            <div className="flex-1">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                {products.map((product, index) => (
+                  <motion.div
+                    key={product.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-100"
+                  >
+                    {/* Image Container with Overlay */}
+                    <div className="relative h-64 p-8 flex items-center justify-center bg-white overflow-hidden">
+                      {/* Background Blob decoration */}
+                      <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      
+                      {/* Product Image */}
+                      <div className="relative w-full h-full transition-transform duration-500 group-hover:scale-110 z-10">
+                        <Image
+                          src={product.image}
+                          alt={product.name}
+                          fill
+                          className="object-contain"
+                        />
+                      </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {products.map((product, index) => (
-            <motion.div
-              key={product.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 border border-gray-100"
-            >
-              {/* 1. Image Container with Overlay */}
-              <div className="relative h-64 p-8 flex items-center justify-center bg-white overflow-hidden">
-                {/* Background Blob decoration */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                {/* Product Image */}
-                <div className="relative w-full h-full transition-transform duration-500 group-hover:scale-110 z-10">
-                  <Image
-                    src={product.image}
-                    alt={product.name}
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-        
-                {/* Hover Overlay with Button */}
-                <div className="absolute inset-0 bg-black/5 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-all duration-300 z-20 flex flex-col items-center justify-center gap-3">
-                  <button className="transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 bg-[#1a0a5c] hover:bg-blue-700 text-white px-6 py-2.5 rounded-full font-medium text-sm flex items-center gap-2 shadow-lg">
-                    <Eye className="w-4 h-4" />
-                      View
-                  </button>
-                </div>
+                      {/* Hover Overlay with Button */}
+                      <div className="absolute inset-0 bg-black/5 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-all duration-300 z-20 flex flex-col items-center justify-center gap-3">
+                        <button className="transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 bg-[#1a0a5c] hover:bg-blue-700 text-white px-6 py-2.5 rounded-full font-medium text-sm flex items-center gap-2 shadow-lg">
+                          <Eye className="w-4 h-4" />
+                          View
+                        </button>
+                      </div>
+                    </div>
+
+                    {/* Product Details */}
+                    <div className="p-6 relative bg-white z-30">
+                      <h3 className="font-bold text-gray-900 text-lg mb-1 group-hover:text-blue-700 transition-colors">
+                        {product.name}
+                      </h3>
+                      <div className="flex items-center justify-between mt-3">
+                        <p className="text-gray-500 text-sm font-medium flex items-center gap-1">
+                          <span className="w-2 h-2 rounded-full bg-green-500"></span>
+                          {product.size}
+                        </p>
+                        {/* Arrow icon */}
+                        <div className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-blue-700 group-hover:text-white transition-all duration-300">
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
               </div>
-        
-              {/* 2. Product Details */}
-              <div className="p-6 relative bg-white z-30">
-                <h3 className="font-bold text-gray-900 text-lg mb-1 group-hover:text-blue-700 transition-colors">
-                  {product.name}
-                </h3>
-                <div className="flex items-center justify-between mt-3">
-                  <p className="text-gray-500 text-sm font-medium flex items-center gap-1">
-                    <span className="w-2 h-2 rounded-full bg-green-500"></span>
-                    {product.size}
-                  </p>
-                  {/* Optional Arrow icon */}
-                  <div className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-blue-700 group-hover:text-white transition-all duration-300">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+            </div>
+          </div>
         </div>
       </section>
     </main>
