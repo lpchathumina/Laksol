@@ -7,8 +7,9 @@ import { motion, AnimatePresence } from "framer-motion";
 const byIndustry = [
   { name: "Care Homes", href: "/solutions/by-industry/care-homes" },
   { name: "Accommodation", href: "/solutions/by-industry/accommodation" },
-  { name: "Restaurants/Bars/Cafes", href: "/solutions/by-industry/restaurants-bars-cafes" },
+  { name: "Restaurants", href: "/solutions/by-industry/restaurants" },
   { name: "Facilities", href: "/solutions/by-industry/facilities" },
+  { name: "Bars & Cafes", href: "/solutions/by-industry/bars-cafes" },
 ];
 
 const byCleaningArea = [
