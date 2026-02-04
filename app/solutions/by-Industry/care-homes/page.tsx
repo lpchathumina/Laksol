@@ -206,7 +206,14 @@ export default function CareHomesPage() {
             {allImages.map((img, index) => (
               <button key={img.id} onClick={() => setActiveImageIndex(index)} className="relative h-1.5 rounded-full overflow-hidden bg-gray-200 transition-all duration-300" style={{ width: index === activeImageIndex ? '2rem' : '0.5rem' }} aria-label={`Go to ${img.title}`}>
                 {index === activeImageIndex && (
-                  <motion.div className="absolute inset-0 bg-[#1a0a5c] rounded-full" initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ duration: 5, ease: "linear" }} style={{ transformOrigin: 'left' }} key={`progress-${activeImageIndex}`} />
+                  <motion.div
+                    className="absolute inset-0 bg-[#1a0a5c] rounded-full"
+                    initial={{ scaleX: 0 }}
+                    animate={{ scaleX: 1 }}
+                    transition={{ duration: 5, ease: "linear" }}
+                    style={{ transformOrigin: 'left' }}
+                    key={`progress-${activeImageIndex}`} 
+                  />
                 )}
               </button>
             ))}
@@ -238,16 +245,44 @@ export default function CareHomesPage() {
               <button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
-                className={`relative text-sm md:text-base font-medium transition-all duration-300 flex items-center gap-2 ${
+                className={`relative px-6 py-3 text-sm md:text-base font-medium transition-all duration-500 overflow-hidden group ${
                   activeCategory === category.id
                     ? 'text-[#1a0a5c] font-bold'
-                    : 'text-gray-500 hover:text-gray-700'
+                    : 'text-gray-500 hover:text-[#1a0a5c]'
                 }`}
               >
-                {activeCategory === category.id && (
-                  <span className="text-[#1a0a5c]">▶</span>
-                )}
-                {category.name}
+                {/* Water/Glass Background */}
+                <span className={`absolute inset-0 bg-gradient-to-r from-cyan-50/50 via-blue-100/30 to-cyan-50/50 backdrop-blur-sm rounded-full transition-all duration-500 ${
+                  activeCategory === category.id 
+                    ? 'opacity-100 scale-100' 
+                    : 'opacity-0 scale-95'
+                }`} />
+      
+                {/* Animated Border */}
+                <span className={`absolute inset-0 rounded-full border-2 transition-all duration-500 ${
+                  activeCategory === category.id
+                    ? 'border-[#1a0a5c]/30'
+                    : 'border-transparent group-hover:border-gray-200'
+                }`} />
+      
+                {/* Bottom Line Animation */}
+                <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-gradient-to-r from-transparent via-[#1a0a5c] to-transparent transition-all duration-500 ${
+                  activeCategory === category.id ? 'w-3/4' : 'w-0 group-hover:w-1/2'
+                }`} />
+      
+                {/* Arrow Icon */}
+                <span className="relative z-10 flex items-center gap-2">
+                  {activeCategory === category.id && (
+                    <motion.span
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      className="text-[#1a0a5c]"
+                    >
+                      ▶
+                    </motion.span>
+                  )}
+                  {category.name}
+                </span>
               </button>
             ))}
           </motion.div>
