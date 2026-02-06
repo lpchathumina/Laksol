@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Target, Eye, Heart, ShieldCheck } from 'lucide-react';
-// import GrowUp from '@/components/layout/growup';
+import GrowUp1 from '@/components/layout/growup1';
 import Book from '@/components/layout/book';
 import Feedback from '@/components/layout/feedback';
 import Clients from '@/components/layout/client';
@@ -424,7 +424,7 @@ const AboutUsPage = () => {
     </div>
   </section>
 
-      {/* <GrowUp /> */}
+      <GrowUp1 />
 
       {/* Timeline Section
       <section className="bg-white py-16 md:py-24">
