@@ -2,13 +2,11 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import ProductsDropdown from "../model/productdropdown";
-import SolutionDropdown from "../model/solutiondropdown";
+import ProductsDropdown from "@/components/model/productdropdown";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [isProductsOpen, setIsProductsOpen] = useState<boolean>(false);
-  const [isSolutionOpen, setIsSolutionOpen] = useState<boolean>(false);
   const [scrolled, setScrolled] = useState<boolean>(false);
 
   // Handle scroll effect
@@ -24,7 +22,6 @@ export default function Navbar() {
     const handleEscape = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         setIsProductsOpen(false);
-        setIsSolutionOpen(false);
       }
     };
 
@@ -51,40 +48,13 @@ export default function Navbar() {
           <div className="hidden md:flex flex-1 items-center justify-start gap-8">
             <NavLink href="/">Home</NavLink>
 
-            {/* Solution Button - Relative Container */}
-            <div className="relative">
-              <button
-                onClick={() => {
-                  setIsSolutionOpen(!isSolutionOpen);
-                  setIsProductsOpen(false);
-                }}
-                className="relative group text-sm font-bold text-black uppercase tracking-widest hover:text-[#2727f6] transition-colors duration-300 flex items-center gap-1"
-              >
-                Solutions
-                <svg 
-                  className={`w-4 h-4 transition-transform duration-300 ${isSolutionOpen ? 'rotate-180' : ''}`} 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /> 
-                </svg>
-                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#2727f6] group-hover:w-full transition-all duration-500 ease-out"></span>
-              </button>
-
-              {/* Solutions Dropdown - Positioned directly below button */}
-              <SolutionDropdown 
-                isOpen={isSolutionOpen} 
-                onClose={() => setIsSolutionOpen(false)} 
-              />
-            </div>
+            <NavLink href="/shop">Shop</NavLink>
 
             {/* Products Button - Relative Container */}
             <div className="relative">
               <button
                 onClick={() => {
                   setIsProductsOpen(!isProductsOpen);
-                  setIsSolutionOpen(false);
                 }}
                 className="relative group text-sm font-bold text-black uppercase tracking-widest hover:text-[#2727f6] transition-colors duration-300 flex items-center gap-1"
               >
@@ -145,15 +115,7 @@ export default function Navbar() {
             <div className="absolute top-full left-0 mt-2 w-full px-4 md:hidden">
               <div className="rounded-2xl bg-white/95 backdrop-blur shadow-xl p-6 flex flex-col space-y-4 text-center border border-gray-200">
                 <Link href="/" className="text-sm font-bold uppercase tracking-widest text-black hover:text-[#F6AB27] transition-colors">Home</Link>
-                <button 
-                  onClick={() => {
-                    setIsMenuOpen(false);
-                    setIsSolutionOpen(true);
-                  }}
-                  className="text-sm font-bold uppercase tracking-widest text-black hover:text-[#F6AB27] transition-colors"
-                >
-                  Solutions
-                </button>
+                <Link href="/shop" className="text-sm font-bold uppercase tracking-widest text-black hover:text-[#F6AB27] transition-colors">Shop</Link>
                 <button 
                   onClick={() => {
                     setIsMenuOpen(false);
