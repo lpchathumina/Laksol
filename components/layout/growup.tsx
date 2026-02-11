@@ -334,7 +334,7 @@ export default function OurJourney() {
                   }}
                   animate={{ 
                     scale: activeIndex === index ? 1.5 : 1,
-                    ring: activeIndex === index ? '2px' : '0px'
+                    boxShadow: activeIndex === index ? `0 0 0 2px ${item.color}` : '0 0 0 0px transparent'
                   }}
                   whileHover={{ scale: 1.4 }}
                 />

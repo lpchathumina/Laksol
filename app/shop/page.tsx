@@ -5,7 +5,17 @@ import Image from 'next/image';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { Search, ChevronLeft, ChevronRight, ShoppingBag, X, ShoppingCart } from 'lucide-react';
 import Link from 'next/link';
-import { products } from './data';
+
+export const products = [
+  { id: 1, name: "Power Degreaser Pro", size: "800mL", image: "/k.png", description: "Heavy-duty industrial strength degreaser", price: 7500 },
+  { id: 2, name: "Kitchen Cleaner Ultra", size: "800mL", image: "/k.png", description: "Perfect for commercial kitchen surfaces", price: 6000 },
+  { id: 3, name: "Grease Buster Max", size: "800mL", image: "/k.png", description: "Eliminates stubborn grease instantly", price: 9000 },
+  { id: 4, name: "Surface Degreaser", size: "800mL", image: "/k.png", description: "Safe for all hard surfaces", price: 4500 },
+  { id: 5, name: "Oven & Grill Cleaner", size: "800mL", image: "/k.png", description: "Thick foam clings to vertical surfaces", price: 6600 },
+  { id: 6, name: "Hood Degreaser Plus", size: "800mL", image: "/k.png", description: "Specialized for ventilation hoods", price: 10500 },
+  { id: 7, name: "Fryer Clean Solution", size: "800mL", image: "/k.png", description: "Deep cleaning for commercial fryers", price: 12000 },
+  { id: 8, name: "All-Purpose Degreaser", size: "800mL", image: "/k.png", description: "Versatile daily cleaner", price: 3900 },
+];
 
 const heroList: Variants = {
   visible: {
@@ -34,15 +44,6 @@ const allProducts = Array.from({ length: 40 }, (_, i) => {
   return {
     ...base,
     id: i + 1, // Generate unique IDs for the demo list
-    // Ensure the ID maps back to a valid base product ID for the detail page linking
-    // Realistically, the detail page should handle looking up by the actual ID, but since we are mocking, 
-    // we will just link to the details of the "base" product that this item is based on, or handle it in the detail page.
-    // For this demo, let's just make the ID match the index + 1 so we can see unique items.
-    // BUT the detail page expects ID to be 1-8. 
-    // So let's actually just loop the ID 1-8 for the link, but display unique IDs?
-    // User requested "shop/[product_id]". The detail page uses `products.find(p => p.id === parseInt(params.id))`.
-    // So we need valid IDs (1-8). 
-    // Let's just cycle the IDs 1-8 strictly for the links.
     originalId: base.id,
     name: `${base.name} ${(Math.floor(i / 8) + 1) > 1 ? (Math.floor(i / 8) + 1) : ''}`.trim(), 
   };
@@ -91,8 +92,8 @@ export default function ShopPage() {
           className="absolute inset-0"
         >
           <Image
-            src="/Degreasing.jpg"
-            alt="Degreasing Products"
+            src="/shop.jpg"
+            alt="shop Products"
             fill
             priority
             className="object-cover object-center"
@@ -112,7 +113,7 @@ export default function ShopPage() {
               variants={heroShow} 
               className="text-white text-4xl sm:text-5xl md:text-6xl md:mt-24 font-bold tracking-tight leading-tight"
             >
-              Degreasing Products
+              All Products
             </motion.h1>
 
             <motion.p 
@@ -123,6 +124,26 @@ export default function ShopPage() {
             </motion.p>
           </motion.div>
         </div> 
+      </section>
+
+      {/* Intro Paragraph */}
+      <section className="max-w-7xl mt-20 mx-auto px-4 sm:px-6 lg:px-8 text-center mb-12 relative z-10">
+        <motion.div
+           initial={{ opacity: 0, y: 20 }}
+           animate={{ opacity: 1, y: 0 }}
+           transition={{ delay: 0.2, duration: 0.6 }}
+        >
+          <motion.h2 
+            className="text-3xl md:text-4xl font-bold text-[#1a0a5c] mb-4 tracking-tight"
+          >
+            All Products 
+          </motion.h2>
+          <motion.p 
+            className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed"
+          >
+            Discover our professional-grade cleaning products designed to tackle the toughest grease and grime in commercial environments.
+          </motion.p>
+        </motion.div>
       </section>
 
       {/* Search Functionality */}
@@ -193,7 +214,7 @@ export default function ShopPage() {
             {currentProducts.map((product, index) => (
               <Link 
                 key={product.id}
-                href={`/shop/${product.originalId}`}
+                href={`/shop/productdetails?id=${product.originalId}`}
                 className="block h-full"
               >
                 <motion.div
