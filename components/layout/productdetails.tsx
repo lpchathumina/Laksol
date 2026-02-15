@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { ChevronRight, ShoppingCart, CheckCircle2, Check, Minus, Plus, ChevronDown } from 'lucide-react';
 
 interface Product {
@@ -57,12 +57,12 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
     hidden: { 
       height: 0, 
       opacity: 0,
-      transition: { duration: 0.3, ease: "easeInOut" }
+      transition: { duration: 0.3, ease: "easeInOut" as const }
     },
     visible: { 
       height: "auto", 
       opacity: 1,
-      transition: { duration: 0.3, ease: "easeInOut" }
+      transition: { duration: 0.3, ease: "easeInOut" as const }
     }
   };
 
@@ -209,7 +209,7 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
           </div>
 
           {/* Description Text */}
-          <p className="text-xl md:text-2xl text-[#1a1a1a] leading-[1.6] mb-16 px-4 md:px-12 font-medium">
+          <p className="text-base md:text-lg text-[#1a1a1a] leading-[1.6] mb-16 px-4 md:px-12 font-medium">
             Professional {product.name} is a super concentrated liquid detergent specifically engineered for washing and pre-soaking of a wide range of kitchen and industrial surfaces. Long-lasting efficient washing-up solution for high-volume environments.
           </p>
 
@@ -227,7 +227,7 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
                   <div className="w-6 h-6 rounded-full bg-black flex items-center justify-center flex-shrink-0 mt-1">
                     <CheckCircle2 size={16} className="text-white" />
                   </div>
-                  <span className="text-lg md:text-xl text-[#333] font-medium leading-normal">
+                  <span className="text-base md:text-lg text-[#333] font-medium leading-normal">
                     {feature}
                   </span>
                 </div>
@@ -238,7 +238,7 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
       </div>
 
       {/* ========== SAFETY & INGREDIENTS SECTION ========== */}
-      <div className="mt-16 py-16 border-t border-gray-100">
+      <div className="mt-1 py-16 border-t border-gray-100">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -248,7 +248,7 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
           {/* Section Badge - Centered */}
           <div className="flex justify-center mb-12">
             <div className="inline-flex items-center gap-3 bg-[#e2e2e2] px-10 py-4 rounded-lg shadow-sm">
-              <span className="text-xl md:text-2xl font-medium text-[#1a1a1a] tracking-tight">Safety & Ingredients</span>
+              <span className="text-base md:text-2xl font-medium text-[#1a1a1a] tracking-tight">Safety & Ingredients</span>
               <div className="w-8 h-8 rounded-full bg-gray-400/50 flex items-center justify-center">
                 <ChevronRight size={20} className="text-white -rotate-45" />
               </div>
@@ -275,7 +275,7 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
                 onClick={() => setIsIngredientsOpen(!isIngredientsOpen)}
                 className="w-full flex items-center justify-between text-left mb-4 group"
               >
-                <h3 className="text-2xl md:text-3xl font-medium text-[#1a1a1a] group-hover:text-[#0061d4] transition-colors">
+                <h3 className="text-base md:text-2xl font-medium text-[#1a1a1a] group-hover:text-[#0061d4] transition-colors">
                   Ingredients We Use
                 </h3>
                 <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ${isIngredientsOpen ? 'bg-[#0061d4]' : 'bg-[#e2e2e2] group-hover:bg-[#0061d4]'}`}>
@@ -318,7 +318,7 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
                           <div className="w-6 h-6 rounded-full bg-teal-500 flex items-center justify-center flex-shrink-0">
                             <Check size={14} className="text-white" strokeWidth={3} />
                           </div>
-                          <span className="text-base md:text-lg text-[#333] font-medium">
+                          <span className="text-base md:text-base text-[#333] font-medium">
                             {ingredient}
                           </span>
                         </motion.div>
@@ -339,7 +339,7 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
                   onClick={() => setIsUsageOpen(!isUsageOpen)}
                   className="w-full flex items-center justify-between bg-[#e2e2e2] px-6 py-4 rounded-lg shadow-sm group hover:bg-[#d5d5d5] transition-colors"
                 >
-                  <span className="text-lg font-medium text-[#1a1a1a]">Usage Instructions</span>
+                  <span className="text-base md:text-2xl font-medium text-[#1a1a1a]">Usage Instructions</span>
                   <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${isUsageOpen ? 'bg-[#0061d4]' : 'bg-gray-400/50 group-hover:bg-[#0061d4]'}`}>
                     <motion.div
                       animate={{ rotate: isUsageOpen ? 180 : 0 }}
@@ -379,7 +379,7 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
                   onClick={() => setIsWarningsOpen(!isWarningsOpen)}
                   className="w-full flex items-center justify-between bg-[#e2e2e2] px-6 py-4 rounded-lg shadow-sm group hover:bg-[#d5d5d5] transition-colors"
                 >
-                  <span className="text-lg font-medium text-[#1a1a1a]">Warnings</span>
+                  <span className="text-base md:text-2xl font-medium text-[#1a1a1a]">Warnings</span>
                   <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${isWarningsOpen ? 'bg-[#0061d4]' : 'bg-gray-400/50 group-hover:bg-[#0061d4]'}`}>
                     <motion.div
                       animate={{ rotate: isWarningsOpen ? 180 : 0 }}
