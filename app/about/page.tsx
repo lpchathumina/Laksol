@@ -402,23 +402,6 @@ const AboutUsPage = () => {
           <p className="text-black text-base leading-relaxed">
             Our comprehensive range of cleaning products is designed to tackle every cleaning challenge. From powerful bathroom cleaners to gentle surface sprays, each product is formulated with care and precision to deliver exceptional results.
           </p>
-
-          <div>
-            <Link
-              href="/products"
-              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-full transition-all duration-300 group"
-            >
-              <span>Read More</span>
-              <svg 
-                className="w-4 h-4 group-hover:translate-x-1 transition-transform" 
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
-          </div>
         </div>
       </div>
     </div>
@@ -491,11 +474,11 @@ const AboutUsPage = () => {
       </section> */}
 
       {/* Core Values Scroll Section */}
-      <section className="relative w-full bg-white">
-        <div className="flex flex-col lg:flex-row">
+      {/* <section className="relative w-full bg-white">
+        <div className="flex flex-col lg:flex-row"> */}
           
           {/* Left Side - Sticky Image */}
-          <div className="lg:w-1/2 h-[50vh] lg:h-screen sticky top-0 flex flex-col justify-between overflow-hidden">
+          {/* <div className="lg:w-1/2 h-[50vh] lg:h-screen sticky top-0 flex flex-col justify-between overflow-hidden">
             <div className="absolute inset-0 z-0">
               <Image
                 src={coreValuesSections[activeFeature].image}
@@ -505,10 +488,10 @@ const AboutUsPage = () => {
                 priority
               />
             </div>
-          </div>
+          </div> */}
 
           {/* Right Side - Scrollable Content */}
-          <div className="lg:w-1/2 relative bg-white">
+          {/* <div className="lg:w-1/2 relative bg-white">
             <div className="flex flex-col">
               {coreValuesSections.map((section, index) => (
                 <div 
@@ -550,7 +533,7 @@ const AboutUsPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Clients Section */}
       <Clients />

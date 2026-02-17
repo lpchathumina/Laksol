@@ -294,6 +294,41 @@ const ContactUs: React.FC = () => {
           </motion.div>
         </div>
       </motion.section>
+
+      {/* Google Map Section - Below Contact Form */}
+      <motion.section 
+        initial="hidden"
+        animate={heroLoaded ? "visible" : "hidden"}
+        variants={contentContainer}
+        className="w-full bg-white py-16 md:py-24"
+      >
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+          {/* Map Header */}
+          <motion.div variants={contentItem} className="mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold text-black mb-3">Visit Our Office</h2>
+            <p className="text-gray-400 text-sm max-w-2xl">
+              Find us at our headquarters in Colombo, Sri Lanka. We're located in the heart of the industrial zone.
+            </p>
+          </motion.div>
+
+          {/* Google Map Embed */}
+          <motion.div 
+            variants={contentItem}
+            className="w-full h-96 md:h-[500px] rounded-2xl overflow-hidden shadow-lg"
+          >
+            <iframe
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.847383391635!2d81.05229732346819!3d6.118536860509434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae5751d5d5d5d5d%3A0x5d5d5d5d5d5d5d5d!2sLakmina%20Products%20pvt%20limited!5e0!3m2!1sen!2slk!4v1234567890123"
+              title="Lakmina Products Location"
+            />
+          </motion.div>
+        </div>
+      </motion.section>
     </main>
   );
 };
