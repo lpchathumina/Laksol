@@ -22,24 +22,6 @@ const Feedback = () => {
       username: 'nefarious_jellybeans_91',
       image: '/user.png',
       text: "The progress tracker is fantastic. It's motivating to see how much I've improved over time. The app has a great mix of common and challenging words."
-    },
-    {
-      name: 'Nicolás Sánchez',
-      username: 'pervasive_inker_83',
-      image: '/user.png',
-      text: "The progress tracker is fantastic. It's motivating to see how much I've improved over time. The app has a great mix of common and challenging words."
-    },
-    {
-      name: 'Noel Jensen',
-      username: 'nefarious_shop_47',
-      image: '/user.png',
-      text: "The progress tracker is fantastic. It's motivating to see how much I've improved over time. The app has a great mix of common and challenging words."
-    },
-    {
-      name: 'Ahmad Khan',
-      username: 'antic_circus_76',
-      image: '/user.png',
-      text: "The progress tracker is fantastic. It's motivating to see how much I've improved over time. The app has a great mix of common and challenging words."
     }
   ];
 
@@ -51,8 +33,8 @@ const Feedback = () => {
           <div className="inline-block border-2 border-orange-400 text-orange-500 text-xs font-semibold px-4 py-2 rounded-full mb-6 tracking-wider">
             TESTIMONIALS
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900">
-            Our trusted clients
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-900">
+            OUR TRUSTED CLIENTS
           </h2>
         </div>
 

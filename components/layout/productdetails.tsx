@@ -503,7 +503,6 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
                   )}
                 </AnimatePresence>
               </div>
-
             </div>
           </div>
         </motion.div>

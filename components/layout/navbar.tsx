@@ -56,7 +56,7 @@ export default function Navbar() {
                 onClick={() => {
                   setIsProductsOpen(!isProductsOpen);
                 }}
-                className="relative group text-sm font-bold text-black uppercase tracking-widest hover:text-[#2727f6] transition-colors duration-300 flex items-center gap-1"
+                className="relative group text-sm font-bold text-black uppercase tracking-widest hover:text-[#C0222F] transition-colors duration-300 flex items-center gap-1"
               >
                 Products
                 <svg 
@@ -67,7 +67,7 @@ export default function Navbar() {
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /> 
                 </svg>
-                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#2727f6] group-hover:w-full transition-all duration-500 ease-out"></span>
+                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#C0222F] group-hover:w-full transition-all duration-500 ease-out"></span>
               </button>
 
               {/* Products Dropdown - Positioned directly below button */}
@@ -82,7 +82,7 @@ export default function Navbar() {
           <div className="flex items-center justify-center">
             <Link href="/">
               <img 
-                src="/logo4.png" 
+                src="/laksol.png" 
                 alt="Logo" 
                 className="h-10 w-auto object-contain" 
               />
@@ -141,10 +141,10 @@ function NavLink({ href, children }: { href: string; children: React.ReactNode }
   return (
     <Link
       href={href}
-      className="relative group text-sm font-bold text-black uppercase tracking-widest hover:text-[#2727f6] transition-colors duration-300"
+      className="relative group text-sm font-bold text-black uppercase tracking-widest hover:text-[#C0222F] transition-colors duration-300"
     >
       {children}
-      <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#2727f6] group-hover:w-full transition-all duration-500 ease-out"></span>
+      <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#C0222F] group-hover:w-full transition-all duration-500 ease-out"></span>
     </Link>
   );
 }

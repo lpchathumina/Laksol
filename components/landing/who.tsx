@@ -27,7 +27,7 @@ export default function WhoWeAreOverlap() {
 
   return (
     <section ref={sectionRef} className="py-16 md:py-24 bg-white overflow-hidden">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         
         {/* Background Text (Ghost Heading) */}
         {/* <h1 
@@ -37,15 +37,15 @@ export default function WhoWeAreOverlap() {
           ABOUT
         </h1> */}
 
-        <div className="flex flex-col md:flex-row items-center md:items-stretch relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
           
           {/* Left: Image */}
           <div 
-            className={`w-full md:w-7/12 relative z-10 transition-all duration-1000 ease-out ${
+            className={`w-full relative transition-all duration-1000 ease-out ${
               isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'
             }`}
           >
-            <div className="relative aspect-video md:aspect-[4/3] w-full overflow-hidden rounded-sm shadow-xl group">
+            <div className="relative aspect-video md:aspect-square w-full overflow-hidden rounded-sm shadow-xl group">
               <Image
                 src="/about.jpg"
                 alt="Lakmina Products Workspace"
@@ -55,10 +55,10 @@ export default function WhoWeAreOverlap() {
             </div>
           </div>
 
-          {/* Right: Content Card */}
+          {/* Right: Content */}
           <div 
-            className={`w-full md:w-5/12 bg-white p-6 sm:p-8 md:p-10 lg:p-12 md:-ml-16 lg:-ml-20 mt-6 md:mt-30 z-20 shadow-xl border-t-4 border-black transition-all duration-1000 ease-out delay-300 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
+            className={`w-full transition-all duration-1000 ease-out delay-300 ${
+              isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'
             }`}
           >
             {/* Section Label */}

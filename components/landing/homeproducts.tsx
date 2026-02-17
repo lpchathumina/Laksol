@@ -41,11 +41,11 @@ export default function ProductSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
         <h2 
-          className={`text-3xl md:text-4xl font-bold text-gray-900 text-center uppercase tracking-wider mb-12 md:mb-16 transition-all duration-1000 ${
+          className={`text-3xl md:text-4xl font-bold text-gray-900 text-center uppercase tracking-wid mb-12 md:mb-16 transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'
           }`}
         >
-          PRODUCT
+          OUR BEST SELLING PRODUCTS
         </h2>
 
         {/* Main Content Area */}
@@ -61,7 +61,7 @@ export default function ProductSection() {
             >
               <div className="flex items-center">
                 {/* Vertical LAKSOL Text */}
-                <div className="hidden md:block">
+                {/* <div className="hidden md:block">
                   <h3 
                     className="text-6xl lg:text-7xl xl:text-8xl font-bold text-gray-200 uppercase"
                     style={{ 
@@ -73,7 +73,7 @@ export default function ProductSection() {
                   >
                     LAKSOL
                   </h3>
-                </div>
+                </div> */}
                 
                 {/* Headline Text */}
                 <div className="md:-ml-2">

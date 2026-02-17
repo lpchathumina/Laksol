@@ -60,21 +60,21 @@ export default function OurServices() {
         {/* Section Heading */}
         <div className="text-center mb-8">
           <h2 
-            className={`text-3xl md:text-4xl font-bold text-black uppercase tracking-wide mb-8 transition-all duration-1000 ${
+            className={`text-2xl md:text-4xl font-bold text-black uppercase tracking-wide mb-8 transition-all duration-1000 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'
             }`}
           >
             OUR SERVICES
           </h2>
           
-          {/* Description */}
+          {/* Description
           <p 
             className={`text-gray-900 text-base md:text-md leading-relaxed max-w-5xl mx-auto transition-all duration-1000 delay-200 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'
             }`}
           >
             At Lakmina Products, we go beyond manufacturing exceptional cleaning solutions. We provide comprehensive services designed to meet the unique needs of households, businesses, and industries. From expert consultation to reliable delivery, our commitment to quality extends to every aspect of customer experience.
-          </p>
+          </p> */}
         </div>
 
         {/* Services Grid */}
