@@ -2,11 +2,11 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import ProductsDropdown from "@/components/model/productdropdown";
+
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  const [isProductsOpen, setIsProductsOpen] = useState<boolean>(false);
+
   const [scrolled, setScrolled] = useState<boolean>(false);
 
   // Handle scroll effect
@@ -17,17 +17,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Close dropdown on escape key
-  useEffect(() => {
-    const handleEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        setIsProductsOpen(false);
-      }
-    };
 
-    document.addEventListener("keydown", handleEscape);
-    return () => document.removeEventListener("keydown", handleEscape);
-  }, []);
 
   return (
     <>
@@ -50,32 +40,7 @@ export default function Navbar() {
 
             <NavLink href="/shop">Shop</NavLink>
 
-            {/* Products Button - Relative Container */}
-            <div className="relative">
-              <button
-                onClick={() => {
-                  setIsProductsOpen(!isProductsOpen);
-                }}
-                className="relative group text-sm font-bold text-black uppercase tracking-widest hover:text-[#C0222F] transition-colors duration-300 flex items-center gap-1"
-              >
-                Products
-                <svg 
-                  className={`w-4 h-4 transition-transform duration-300 ${isProductsOpen ? 'rotate-180' : ''}`} 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /> 
-                </svg>
-                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#C0222F] group-hover:w-full transition-all duration-500 ease-out"></span>
-              </button>
-
-              {/* Products Dropdown - Positioned directly below button */}
-              <ProductsDropdown 
-                isOpen={isProductsOpen} 
-                onClose={() => setIsProductsOpen(false)} 
-              />
-            </div>
+            <NavLink href="/products">Products</NavLink>
           </div>
 
           {/* --- MIDDLE LOGO --- */}
@@ -116,15 +81,7 @@ export default function Navbar() {
               <div className="rounded-2xl bg-white/95 backdrop-blur shadow-xl p-6 flex flex-col space-y-4 text-center border border-gray-200">
                 <Link href="/" className="text-sm font-bold uppercase tracking-widest text-black hover:text-[#F6AB27] transition-colors">Home</Link>
                 <Link href="/shop" className="text-sm font-bold uppercase tracking-widest text-black hover:text-[#F6AB27] transition-colors">Shop</Link>
-                <button 
-                  onClick={() => {
-                    setIsMenuOpen(false);
-                    setIsProductsOpen(true);
-                  }}
-                  className="text-sm font-bold uppercase tracking-widest text-black hover:text-[#F6AB27] transition-colors"
-                >
-                  Products
-                </button>
+                <Link href="/products" className="text-sm font-bold uppercase tracking-widest text-black hover:text-[#F6AB27] transition-colors" onClick={() => setIsMenuOpen(false)}>Products</Link>
                 <Link href="/about" className="text-sm font-bold uppercase tracking-widest text-black hover:text-[#F6AB27] transition-colors">About Us</Link>
                 <Link href="/contact" className="text-sm font-bold uppercase tracking-widest text-black hover:text-[#F6AB27] transition-colors">Contact Us</Link>
               </div>
