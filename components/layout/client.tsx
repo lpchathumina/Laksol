@@ -4,16 +4,16 @@
     import Image from 'next/image';
 
     const clients = [
-    { name: "Ballys", logo: "/logos/ballys.png" },
-    { name: "Bellagio", logo: "/logos/bellagio.png" },
-    { name: "Cafe", logo: "/logos/cafe.jpg" },
-    { name: "Dinapala", logo: "/logos/dinapala.jpeg" },
-    { name: "Kandy", logo: "/logos/kandy.png" },
-    { name: "LA", logo: "/logos/la.png" },
-    { name: "Molly", logo: "/logos/molly.png" },
-    { name: "Prasad", logo: "/logos/prasad.png" },
-    { name: "RichLook", logo: "/logos/rich.png" },
-    { name: "RV", logo: "/logos/rv.png" }
+    { name: "Sampath", logo: "/sampath.png" },
+    { name: "KFC", logo: "/kfc.png" },
+    { name: "DSI", logo: "/dsi.jpg" },
+    { name: "McDonalds", logo: "/mcdonalds.png" },
+    { name: "PizzaHut", logo: "/pizzahut.png" },
+    { name: "LOC", logo: "/loc.png" },
+    { name: "Susil", logo: "/susil.png" },
+    { name: "Janasawi", logo: "/janasawi.png" },
+    { name: "Maliban", logo: "/maliban.png" },
+    { name: "BOC", logo: "/boc.png" }
     ];
 
     export default function Clients() {

@@ -302,7 +302,7 @@ const ContactUs: React.FC = () => {
         variants={contentContainer}
         className="w-full bg-white py-16 md:py-24"
       >
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 mb-30">
           {/* Map Header */}
           <motion.div variants={contentItem} className="mb-10">
             <h2 className="text-3xl md:text-4xl font-bold text-black mb-3">Visit Our Office</h2>
