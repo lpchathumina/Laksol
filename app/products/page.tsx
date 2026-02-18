@@ -40,10 +40,7 @@ const productCategories = [
       { id: 2, name: "Kitchen Cleaner Ultra", size: "800mL", image: "/k.png" },
       { id: 3, name: "Grease Buster Max", size: "800mL", image: "/k.png" },
       { id: 4, name: "Surface Degreaser", size: "800mL", image: "/k.png" },
-      { id: 5, name: "Oven & Grill Cleaner", size: "800mL", image: "/k.png" },
-      { id: 6, name: "Hood Degreaser Plus", size: "800mL", image: "/k.png" },
-      { id: 7, name: "Fryer Clean Solution", size: "800mL", image: "/k.png" },
-      { id: 8, name: "All-Purpose Degreaser", size: "800mL", image: "/k.png" }
+      { id: 5, name: "Oven & Grill Cleaner", size: "800mL", image: "/k.png" }
     ]
   },
   {
@@ -59,67 +56,55 @@ const productCategories = [
       { id: 2, name: "Kitchen Cleaner Ultra", size: "800mL", image: "/k.png" },
       { id: 3, name: "Grease Buster Max", size: "800mL", image: "/k.png" },
       { id: 4, name: "Surface Degreaser", size: "800mL", image: "/k.png" },
-      { id: 5, name: "Oven & Grill Cleaner", size: "800mL", image: "/k.png" },
-      { id: 6, name: "Hood Degreaser Plus", size: "800mL", image: "/k.png" },
-      { id: 7, name: "Fryer Clean Solution", size: "800mL", image: "/k.png" },
-      { id: 8, name: "All-Purpose Degreaser", size: "800mL", image: "/k.png" }
+      { id: 5, name: "Oven & Grill Cleaner", size: "800mL", image: "/k.png" }
     ]
   },
   {
-    id: 'disinfectants',
-    title: "Disinfectants Products",
-    subtitle: "CLEAN AND DISINFECT FOR INFECTION PREVENTION AND CONTROL",
-    heroImage: "/Disinfectants.jpg",
-    detailTitle: "Disinfectants",
-    detailImage: "/disinfectants.jpg",
+    id: 'handwash',
+    title: "Handwash Products",
+    subtitle: "GENTLE YET EFFECTIVE HAND CLEANSING FOR EVERYDAY HYGIENE",
+    heroImage: "/handwash.jpg",
+    detailTitle: "Handwash",
+    detailImage: "/handwash.jpg",
     detailText: "Range hoods, fryers, ovens, walls and other tough greasy surfaces need a heavy duty degreaser to clean. These areas should be cleaned as needed. Rubbish and grease bins should be cleaned weekly.",
     products: [
       { id: 1, name: "Power Degreaser Pro", size: "800mL", image: "/k.png" },
       { id: 2, name: "Kitchen Cleaner Ultra", size: "800mL", image: "/k.png" },
       { id: 3, name: "Grease Buster Max", size: "800mL", image: "/k.png" },
       { id: 4, name: "Surface Degreaser", size: "800mL", image: "/k.png" },
-      { id: 5, name: "Oven & Grill Cleaner", size: "800mL", image: "/k.png" },
-      { id: 6, name: "Hood Degreaser Plus", size: "800mL", image: "/k.png" },
-      { id: 7, name: "Fryer Clean Solution", size: "800mL", image: "/k.png" },
-      { id: 8, name: "All-Purpose Degreaser", size: "800mL", image: "/k.png" }
+      { id: 5, name: "Oven & Grill Cleaner", size: "800mL", image: "/k.png" }
     ]
   },
   {
-    id: 'floor-care',
-    title: "Floor Care Products",
-    subtitle: "KEEP FLOORS CLEAN AND ATTRACTIVE WITH OUR SPECIALIZED FLOOR CARE SOLUTIONS",
-    heroImage: "/FloorCare.jpg",
-    detailTitle: "Floor Care",
-    detailImage: "/floor-care.jpg",
-    detailText: "Range hoods, fryers, ovens, walls and other tough greasy surfaces need a heavy duty degreaser to clean. These areas should be cleaned as needed. Rubbish and grease bins should be cleaned weekly.",
+    id: 'high-pressure',
+    title: "High Pressure Products",
+    subtitle: "POWERFUL CLEANING SOLUTIONS FOR HIGH-PRESSURE WASHING SYSTEMS",
+    heroImage: "/high-pressure.jpg",
+    detailTitle: "High Pressure",
+    detailImage: "/high-pressure.jpg",
+    detailText: "Our high-pressure cleaning products are specially formulated to work with pressure washing equipment, delivering superior cleaning results on a variety of surfaces. Ideal for vehicles, buildings, and industrial equipment.",
     products: [
       { id: 1, name: "Power Degreaser Pro", size: "800mL", image: "/k.png" },
       { id: 2, name: "Kitchen Cleaner Ultra", size: "800mL", image: "/k.png" },
       { id: 3, name: "Grease Buster Max", size: "800mL", image: "/k.png" },
       { id: 4, name: "Surface Degreaser", size: "800mL", image: "/k.png" },
-      { id: 5, name: "Oven & Grill Cleaner", size: "800mL", image: "/k.png" },
-      { id: 6, name: "Hood Degreaser Plus", size: "800mL", image: "/k.png" },
-      { id: 7, name: "Fryer Clean Solution", size: "800mL", image: "/k.png" },
-      { id: 8, name: "All-Purpose Degreaser", size: "800mL", image: "/k.png" }
+      { id: 5, name: "Oven & Grill Cleaner", size: "800mL", image: "/k.png" }
     ]
   },
   {
-    id: 'hard-surface-cleaning',
-    title: "Hard Surface Cleaning Products",
-    subtitle: "SOLUTIONS FOR GENERAL SURFACES AND SPECIALTY CLEANING NEEDS",
-    heroImage: "/hardsurface_hero.jpg",
-    detailTitle: "Hard Surface Cleaning",
-    detailImage: "/hardsurface.jpg",
-    detailText: "Range hoods, fryers, ovens, walls and other tough greasy surfaces need a heavy duty degreaser to clean. These areas should be cleaned as needed. Rubbish and grease bins should be cleaned weekly.",
+    id: 'toilet-cleaner',
+    title: "Toilet Cleaner Products",
+    subtitle: "POWERFUL TOILET CLEANERS FOR A HYGIENIC AND FRESH RESTROOM ENVIRONMENT",
+    heroImage: "/toilet-cleaner.jpg",
+    detailTitle: "Toilet Cleaner",
+    detailImage: "/toilet-cleaner.jpg",
+    detailText: "Our toilet cleaners are formulated to tackle tough stains, limescale, and germs, leaving your toilet sparkling clean and fresh. Effective for both regular maintenance and deep cleaning.",
     products: [
       { id: 1, name: "Power Degreaser Pro", size: "800mL", image: "/k.png" },
       { id: 2, name: "Kitchen Cleaner Ultra", size: "800mL", image: "/k.png" },
       { id: 3, name: "Grease Buster Max", size: "800mL", image: "/k.png" },
       { id: 4, name: "Surface Degreaser", size: "800mL", image: "/k.png" },
-      { id: 5, name: "Oven & Grill Cleaner", size: "800mL", image: "/k.png" },
-      { id: 6, name: "Hood Degreaser Plus", size: "800mL", image: "/k.png" },
-      { id: 7, name: "Fryer Clean Solution", size: "800mL", image: "/k.png" },
-      { id: 8, name: "All-Purpose Degreaser", size: "800mL", image: "/k.png" }
+      { id: 5, name: "Oven & Grill Cleaner", size: "800mL", image: "/k.png" }
     ]
   }
 ];
@@ -260,7 +245,7 @@ export default function ProductsPage() {
           </section>
 
           {/* Products Grid */}
-          <section className="py-16 md:py-24 bg-white">
+          <section className="py-16 md:py-24 bg-white mb-20">
             <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
@@ -323,19 +308,6 @@ export default function ProductsPage() {
                   </motion.div>
                 ))}
               </div>
-
-              {/* CTA Button */}
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="mt-14 text-center"
-              >
-                <button className="inline-flex items-center gap-2 px-7 py-3 bg-gray-900 text-white font-semibold rounded-lg hover:bg-black transition-colors shadow-md hover:shadow-lg">
-                   <ShoppingBag size={18} />
-                   View All Products
-                </button>
-              </motion.div>
             </div>
           </section>
         </motion.div>

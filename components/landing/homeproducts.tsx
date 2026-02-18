@@ -45,7 +45,7 @@ export default function ProductSection() {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'
           }`}
         >
-          OUR BEST SELLING PRODUCTS
+          BEST SELLING PRODUCTS
         </h2>
 
         {/* Main Content Area */}

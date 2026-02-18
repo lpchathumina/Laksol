@@ -17,7 +17,7 @@ const Footer = () => {
     <footer className="bg-gray-100 py-12 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Newsletter Section */}
-        <div className="bg-gradient-to-r from-[#dcdcff] to-[#2323de] rounded-3xl p-8 md:p-12 mb-12 relative overflow-hidden">
+        <div className="bg-gradient-to-r from-[#dcdcff] to-[#2323de] rounded-3xl p-8 md:p-12 mb-12 -mt-40 relative overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               {/* Left Side - Image */}
               <div className="relative h-48 md:h-64 flex items-center justify-center">
@@ -95,10 +95,10 @@ const Footer = () => {
           <div className="lg:col-span-4">
             <div className="flex items-center gap-1 mb-4">
               <div className="flex items-center justify-center">
-                <img src='/logo4.png' className='h-8 w-30' alt="Logo" />
+                <img src='/laksol.png' className='h-10 w-24' alt="Logo" />
               </div>
             </div>
-            <p className="text-gray-600 text-sm leading-relaxed mb-4">
+            <p className="text-black text-sm leading-relaxed mb-4">
               Lakmina Products, established in 2010 by owner Ajantha Liyanagama, has earned growing recognition in 
               local and international markets as a dedicated manufacturer of quality consumer goods.
             </p>
@@ -115,51 +115,39 @@ const Footer = () => {
                 href="#"
                 className="flex items-center justify-center hover:bg-gray-50 transition-colors"
               >
-                <Image src="/twitter.png" alt="Twitter" width={26} height={26} />
-              </Link>
-              <Link
-                href="#"
-                className="flex items-center justify-center hover:bg-gray-50 transition-colors"
-              >
                 <Image src="/whatsapp.png" alt="Instagram" width={26} height={26} />
               </Link>
               <Link
                 href="#"
                 className="flex items-center justify-center hover:bg-gray-50 transition-colors"
               >
-                <Image src="/linkdin.png" alt="LinkedIn" width={26} height={26} />
-              </Link>
-              <Link
-                href="#"
-                className="flex items-center justify-center hover:bg-gray-50 transition-colors"
-              >
-                <Image src="/instagram.png" alt="Google" width={26} height={26} />
+                <Image src="/twitter.png" alt="Twitter" width={26} height={26} />
               </Link>
             </div>
           </div>
 
           {/* Company Links */}
           <div className="lg:col-span-2 lg:col-start-6">
-            <h3 className="font-semibold text-gray-900 mb-4 text-md">Company</h3>
+            <h3 className="font-semibold text-black mb-4 text-md">Company</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="#" className="text-gray-600 hover:text-gray-900 text-md transition-colors">
+                <Link href="/about" className="text-black hover:text-red-400 text-md transition-colors">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-600 hover:text-gray-900 text-md transition-colors">
-                  Services
+                <Link href="/products" className="text-black hover:text-red-400 text-md transition-colors">
+                  Products
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-600 hover:text-gray-900 text-md transition-colors">
-                  Community
+                <Link href="/shop" className="text-black hover:text-red-400 text-md transition-colors">
+                  Shop
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-600 hover:text-gray-900 text-md transition-colors">
-                  Testimonial
+                <Link href="/contact" className="text-black hover:text-red-400 text-md transition-colors">
+                  Contact Us
                 </Link>
               </li>
             </ul>
@@ -167,26 +155,21 @@ const Footer = () => {
 
           {/* Support Links */}
           <div className="lg:col-span-2">
-            <h3 className="font-semibold text-gray-900 mb-4 text-md">Support</h3>
+            <h3 className="font-semibold text-black mb-4 text-md">Support</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="#" className="text-gray-600 hover:text-gray-900 text-md transition-colors">
-                  Help Center
+                <Link href="/privacy-policy" className="text-black hover:text-red-400 text-md transition-colors">
+                  Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-600 hover:text-gray-900 text-md transition-colors">
-                  Tweet @ Us
+                <Link href="/terms-and-conditions" className="text-black hover:text-red-400 text-md transition-colors">
+                  Terms & Conditions
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-600 hover:text-gray-900 text-md transition-colors">
-                  Webians
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-gray-600 hover:text-gray-900 text-md transition-colors">
-                  Feedback
+                <Link href="/sitemap" className="text-black hover:text-red-400 text-md transition-colors">
+                  Site Map
                 </Link>
               </li>
             </ul>
@@ -194,11 +177,11 @@ const Footer = () => {
 
           {/* Contact Us */}
           <div className="lg:col-span-3">
-            <h3 className="font-semibold text-gray-900 mb-4 text-md">Contact Us</h3>
+            <h3 className="font-semibold text-black mb-4 text-md">Contact Us</h3>
             <ul className="space-y-3">
               <li className="flex items-center gap-2">
                 <svg
-                  className="w-5 h-5 text-blue-600 flex-shrink-0"
+                  className="w-5 h-5 text-red-600 flex-shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -210,11 +193,11 @@ const Footer = () => {
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   />
                 </svg>
-                <span className="text-gray-600 text-md">(91) 98765 4321 54</span>
+                <span className="text-black text-md">(047) 222 5356</span>
               </li>
               <li className="flex items-center gap-2">
                 <svg
-                  className="w-5 h-5 text-blue-600 flex-shrink-0"
+                  className="w-5 h-5 text-red-600 flex-shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -226,29 +209,21 @@ const Footer = () => {
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                <span className="text-gray-600 text-md">support@mail.com</span>
+                <span className="text-black text-md">support@lakmina.com</span>
               </li>
             </ul>
           </div>
         </div>
 
         {/* Copyright Bar */}
-        <div className="border-t border-gray-200 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-gray-600 text-md">
-            © Copyright by CodedUI. All rights reserved.
+        <div className="border-t border-red-200 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-black text-md">
+            © 2026 Lakmina Products. All Rights Reserved
           </p>
           <div className="flex items-center gap-6">
-            <Link href="#" className="text-gray-600 hover:text-gray-900 text-md transition-colors">
-              Privacy Policy
-            </Link>
-            <Link href="#" className="text-gray-600 hover:text-gray-900 text-md transition-colors">
-              Terms of Use
-            </Link>
-            <Link href="#" className="text-gray-600 hover:text-gray-900 text-md transition-colors">
-              Legal
-            </Link>
-            <Link href="#" className="text-gray-600 hover:text-gray-900 text-md transition-colors">
-              Site Map
+            <Link href="#" className="text-black text-md transition-colors">
+              Developed by  
+              <a href="https://wa.me/94703906526" target="_blank" rel="noopener noreferrer" className="text-black hover:text-red-600 text-md transition-colors"> Chathumina Liyanagamage</a>
             </Link>
           </div>
         </div>

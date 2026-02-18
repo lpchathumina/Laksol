@@ -82,7 +82,7 @@ export default function ShopPage() {
   };
 
   return (
-    <main className="w-full bg-white text-black">
+    <main className="w-full bg-white text-black mb-40">
       {/* Hero Section */}
       <section className="relative isolate h-[60vh] md:h-[90vh] overflow-hidden">
         <motion.div
