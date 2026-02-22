@@ -3,7 +3,7 @@
 import React, { useMemo, Suspense } from 'react';
 import { useSearchParams, notFound } from 'next/navigation';
 import ProductDetails from '@/components/layout/productdetails';
-import { products } from '../page';
+import { allProducts as products } from '../product-data';
 
 function ProductDetailsContent() {
   const searchParams = useSearchParams();

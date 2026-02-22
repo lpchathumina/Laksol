@@ -6,16 +6,7 @@ import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { Search, ChevronLeft, ChevronRight, ShoppingBag, X, ShoppingCart } from 'lucide-react';
 import Link from 'next/link';
 
-export const products = [
-  { id: 1, name: "Power Degreaser Pro", size: "800mL", image: "/k.png", description: "Heavy-duty industrial strength degreaser", price: 7500 },
-  { id: 2, name: "Kitchen Cleaner Ultra", size: "800mL", image: "/k.png", description: "Perfect for commercial kitchen surfaces", price: 6000 },
-  { id: 3, name: "Grease Buster Max", size: "800mL", image: "/k.png", description: "Eliminates stubborn grease instantly", price: 9000 },
-  { id: 4, name: "Surface Degreaser", size: "800mL", image: "/k.png", description: "Safe for all hard surfaces", price: 4500 },
-  { id: 5, name: "Oven & Grill Cleaner", size: "800mL", image: "/k.png", description: "Thick foam clings to vertical surfaces", price: 6600 },
-  { id: 6, name: "Hood Degreaser Plus", size: "800mL", image: "/k.png", description: "Specialized for ventilation hoods", price: 10500 },
-  { id: 7, name: "Fryer Clean Solution", size: "800mL", image: "/k.png", description: "Deep cleaning for commercial fryers", price: 12000 },
-  { id: 8, name: "All-Purpose Degreaser", size: "800mL", image: "/k.png", description: "Versatile daily cleaner", price: 3900 },
-];
+import { allProducts as products } from './product-data';
 
 const heroList: Variants = {
   visible: {
@@ -38,16 +29,8 @@ const heroShow: Variants = {
   }
 };
 
-// Generate more products for pagination demonstration (using the 8 base products)
-const allProducts = Array.from({ length: 40 }, (_, i) => {
-  const base = products[i % products.length];
-  return {
-    ...base,
-    id: i + 1, // Generate unique IDs for the demo list
-    originalId: base.id,
-    name: `${base.name} ${(Math.floor(i / 8) + 1) > 1 ? (Math.floor(i / 8) + 1) : ''}`.trim(), 
-  };
-});
+// Use all products from centralized data and shuffle them for randomized view
+const allProducts = [...products].sort(() => Math.random() - 0.5);
 
 const ITEMS_PER_PAGE = 20;
 
@@ -214,7 +197,7 @@ export default function ShopPage() {
             {currentProducts.map((product, index) => (
               <Link 
                 key={product.id}
-                href={`/shop/productdetails?id=${product.originalId}`}
+                href={`/shop/productdetails?id=${product.id}`}
                 className="block h-full"
               >
                 <motion.div
