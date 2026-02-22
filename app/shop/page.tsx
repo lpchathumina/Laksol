@@ -150,7 +150,7 @@ export default function ShopPage() {
       <section className="max-w-3xl mx-auto px-4 mb-20 relative z-40">
         <div className="relative group">
           <div className="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
-            <Search className="h-5 w-5 text-gray-400 group-focus-within:text-[#2727f6] transition-colors" />
+            <Search className="h-5 w-5 text-gray-400 transition-colors" />
           </div>
           <input
             type="text"
@@ -159,7 +159,7 @@ export default function ShopPage() {
             onChange={handleSearch}
             onFocus={() => setShowSuggestions(true)}
             onBlur={() => setTimeout(() => setShowSuggestions(false), 200)}
-            className="w-full pl-12 pr-12 py-4 rounded-full border border-gray-200 bg-white shadow-sm hover:shadow-md focus:shadow-xl focus:ring-2 focus:ring-[#2727f6]/20 focus:border-[#2727f6] outline-none transition-all duration-300 text-gray-800 text-lg placeholder:text-gray-400"
+            className="w-full pl-12 pr-12 py-4 rounded-full border border-gray-200 bg-white shadow-sm hover:shadow-md focus:shadow-xl outline-none transition-all duration-300 text-gray-800 text-lg placeholder:text-gray-400"
           />
           {searchQuery && (
             <button 
@@ -184,13 +184,13 @@ export default function ShopPage() {
                     <button
                       key={product.id}
                       onClick={() => handleSuggestionClick(product.name)}
-                      className="w-full text-left px-6 py-4 hover:bg-blue-50/50 transition-colors flex items-center gap-4 border-b border-gray-50 last:border-none group/item"
+                      className="w-full text-left px-6 py-4 hover:bg-red-50/50 transition-colors flex items-center gap-4 border-b border-gray-50 last:border-none group/item"
                     >
                       <div className="w-10 h-10 relative rounded-lg overflow-hidden bg-white border border-gray-100 flex-shrink-0 group-hover/item:border-blue-200 transition-colors">
                         <Image src={product.image} alt="" fill className="object-contain p-1" />
                       </div>
                       <div className="flex-1">
-                        <span className="block text-gray-800 font-semibold group-hover/item:text-[#2727f6] transition-colors">{product.name}</span>
+                        <span className="block text-gray-800 font-semibold group-hover/item:text-red-500 transition-colors">{product.name}</span>
                         <span className="text-xs text-gray-500">{product.size}</span>
                       </div>
                     </button>
@@ -226,7 +226,7 @@ export default function ShopPage() {
                 >
                   {/* Image Area */}
                   <div className="relative h-[280px] p-8 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white overflow-hidden">
-                    <div className="absolute top-0 right-0 w-40 h-40 bg-blue-100/30 rounded-full blur-3xl -mr-10 -mt-10 transition-all duration-500 group-hover:bg-blue-200/40" />
+                    <div className="absolute top-0 right-0 w-40 h-40 bg-blue-100/30 rounded-full blur-3xl -mr-10 -mt-10 transition-all duration-500 group-hover:bg-red-200/40" />
                     
                     <div className="relative w-full h-full transition-transform duration-500 group-hover:scale-110 z-10">
                       <Image
@@ -239,7 +239,7 @@ export default function ShopPage() {
 
                     {/* Overlay Actions */}
                     <div className="absolute inset-0 bg-black/5 backdrop-blur-[1px] opacity-0 group-hover:opacity-100 transition-all duration-300 z-20 flex flex-col items-center justify-center gap-3">
-                      <button className="transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 bg-[#1a0a5c] hover:bg-[#2727f6] text-white px-6 py-2.5 rounded-full font-bold text-sm flex items-center gap-2 shadow-lg">
+                      <button className="transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 bg-red-600 hover:bg-red-900 text-white px-6 py-2.5 rounded-full font-bold text-sm flex items-center gap-2 shadow-lg">
                         <ShoppingCart size={16} />
                         Buy Now
                       </button>
@@ -248,7 +248,7 @@ export default function ShopPage() {
 
                   {/* Details Area */}
                   <div className="p-6 flex-1 flex flex-col">
-                    <h3 className="font-bold text-gray-900 text-lg mb-2 line-clamp-2 group-hover:text-[#2727f6] transition-colors" title={product.name}>
+                    <h3 className="font-bold text-gray-900 text-lg mb-2 line-clamp-2 group-hover:text-red-500 transition-colors" title={product.name}>
                       {product.name}
                     </h3>
                     <div className="mt-auto flex items-center justify-between">
@@ -292,7 +292,7 @@ export default function ShopPage() {
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
             disabled={currentPage === 1}
-            className="group flex items-center gap-2 px-6 py-3 rounded-full bg-white border border-gray-200 text-gray-700 font-bold hover:bg-gray-50 hover:border-[#2727f6] hover:text-[#2727f6] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:border-gray-200 disabled:hover:text-gray-700 transition-all duration-300 shadow-sm"
+            className="group flex items-center gap-2 px-6 py-3 rounded-full bg-white border border-gray-200 text-gray-700 font-bold hover:bg-gray-50 hover:border-red-500 hover:text-red-500 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:border-gray-200 disabled:hover:text-gray-700 transition-all duration-300 shadow-sm"
           >
             <ChevronLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
             Previous
@@ -308,8 +308,8 @@ export default function ShopPage() {
                 }}
                 className={`w-12 h-12 rounded-full flex items-center justify-center font-bold text-sm transition-all duration-300 ${
                   currentPage === page
-                    ? 'bg-[#1a0a5c] text-white shadow-xl shadow-blue-900/20 transform scale-105'
-                    : 'bg-white text-gray-600 hover:bg-gray-100 hover:text-[#2727f6]'
+                    ? 'bg-gray-400 text-white shadow-xl shadow-blue-900/20 transform scale-105'
+                    : 'bg-gray-100 text-gray-600 hover:bg-gray-100 hover:text-red-500'
                 }`}
               >
                 {page}
@@ -323,7 +323,7 @@ export default function ShopPage() {
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
             disabled={currentPage === totalPages}
-            className="group flex items-center gap-2 px-6 py-3 rounded-full bg-white border border-gray-200 text-gray-700 font-bold hover:bg-gray-50 hover:border-[#2727f6] hover:text-[#2727f6] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:border-gray-200 disabled:hover:text-gray-700 transition-all duration-300 shadow-sm"
+            className="group flex items-center gap-2 px-6 py-3 rounded-full bg-white border border-gray-200 text-gray-700 font-bold hover:bg-gray-50 hover:border-red-500 hover:text-red-500 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-white disabled:hover:border-gray-200 disabled:hover:text-gray-700 transition-all duration-300 shadow-sm"
           >
             Next
             <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />

@@ -199,7 +199,7 @@ const AboutUsPage = () => {
           className="absolute inset-0"
         >
           <Image
-            src="/aboutus1_hero.jpg"
+            src="/about3.jpg"
             alt="About Us - Lakmina Products"
             fill
             priority
@@ -231,45 +231,6 @@ const AboutUsPage = () => {
             </motion.p>
           </motion.div>
         </div> 
-      </section>
-
-      {/* Social Media Icons - Right Side */}
-      <section className="relative">
-        <div className="absolute right-0 -top-40 -translate-y-1/2 flex flex-col items-center gap-4 pr-6 md:pr-8 z-20">
-          <div className="w-0.5 h-16 bg-white" />
-          
-          <Link
-            href="#"
-            className="w-12 h-12 rounded-full bg-white flex items-center justify-center hover:bg-gray-100 transition-colors shadow-lg"
-            aria-label="Facebook"
-          >
-            <Image src="/facebook3.png" alt="Facebook" width={28} height={28} />
-          </Link>
-
-          <Link
-            href="#"
-            className="w-12 h-12 rounded-full bg-white flex items-center justify-center hover:bg-gray-100 transition-colors shadow-lg"
-            aria-label="WhatsApp"
-          >
-            <Image src="/whatsapp1.png" alt="WhatsApp" width={28} height={28} />
-          </Link>
-
-          <div className="mt-4">
-            <svg
-              className="w-6 h-6 text-white animate-bounce"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M19 14l-7 7m0 0l-7-7m7 7V3"
-              />
-            </svg>
-          </div>
-        </div>
       </section>
 
       {/* Content Section - Committed to Excellence */}
@@ -353,14 +314,14 @@ const AboutUsPage = () => {
           <div className="space-y-0">
             <div className="text-center py-6 border-b border-gray-200">
               <div className="text-4xl md:text-5xl font-bold text-black mb-1">
-                <Counter end={20.5} suffix="k" decimals={1} />
+                <Counter end={1.5} suffix="k" decimals={1} />
               </div>
               <div className="text-gray-500 text-sm">Successfully Delivered</div>
             </div>
 
             <div className="text-center py-6 border-b border-gray-200">
               <div className="text-4xl md:text-5xl font-bold text-black mb-1">
-                <Counter end={450} suffix="+" />
+                <Counter end={50} suffix="+" />
               </div>
               <div className="text-gray-500 text-sm">Happy Customers</div>
             </div>
@@ -389,10 +350,10 @@ const AboutUsPage = () => {
 
         <div className="lg:col-span-4 lg:mt-26 space-y-6 ">
           <div className="flex items-center gap-2">
-            <svg className="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4 text-red-600" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
             </svg>
-            <span className="text-blue-600 text-sm font-medium tracking-wider uppercase">About Company</span>
+            <span className="text-red-600 text-sm font-medium tracking-wider uppercase">About Company</span>
           </div>
 
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">

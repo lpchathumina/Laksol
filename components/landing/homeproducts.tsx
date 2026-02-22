@@ -113,7 +113,7 @@ export default function ProductSection() {
                   Our premium cleaning products are formulated to deliver exceptional results while being gentle on surfaces. From bathrooms to kitchens, Lakmina Products provide powerful cleaning solutions that meet the highest standards.
                 </p>
 
-                <button className="px-6 py-2.5 md:px-8 md:py-3 bg-gray-400 hover:bg-gray-500 text-white font-medium rounded-lg transition-colors duration-300">
+                <button className="px-6 py-2.5 md:px-8 md:py-3 bg-red-500 hover:bg-red-700 text-white font-medium rounded-lg transition-colors duration-300">
                   See More...
                 </button>
               </div>

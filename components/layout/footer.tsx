@@ -14,10 +14,10 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-100 py-12 px-4">
+    <footer className="bg-gray-200 py-12 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Newsletter Section */}
-        <div className="bg-gradient-to-r from-[#dcdcff] to-[#2323de] rounded-3xl p-8 md:p-12 mb-12 -mt-40 relative overflow-hidden">
+        <div className="bg-gradient-to-r from-gray-300 to-gray-700 rounded-3xl p-8 md:p-12 mb-12 -mt-40 relative overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               {/* Left Side - Image */}
               <div className="relative h-48 md:h-64 flex items-center justify-center">
@@ -65,13 +65,13 @@ const Footer = () => {
                       placeholder="Enter your email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="w-full pl-12 pr-4 py-3.5 rounded-xl bg-white/90 backdrop-blur-sm text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-white/50 text-sm"
+                      className="w-full pl-4 pr-4 py-3.5 rounded-xl bg-white/90 backdrop-blur-sm text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-white/50 text-sm"
                       required
                     />
                   </div>
                   <button
                     type="submit"
-                    className="px-8 py-3.5 bg-white text-blue-600 rounded-xl font-semibold hover:bg-gray-50 transition-colors text-sm whitespace-nowrap"
+                    className="px-8 py-3.5 bg-white text-red-600 rounded-xl font-semibold hover:bg-gray-300 transition-colors text-sm whitespace-nowrap"
                   >
                     Subscribe
                   </button>
@@ -106,22 +106,20 @@ const Footer = () => {
             {/* Social Icons */}
             <div className="flex items-center gap-4">
               <Link
-                href="#"
+                href="https://www.facebook.com/lakminaproducts"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center justify-center hover:bg-gray-50 transition-colors"
               >
                 <Image src="/facebook.png" alt="Facebook" width={26} height={26} />
               </Link>
               <Link
-                href="#"
+                href="https://wa.me/94776873199"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center justify-center hover:bg-gray-50 transition-colors"
               >
                 <Image src="/whatsapp.png" alt="Instagram" width={26} height={26} />
-              </Link>
-              <Link
-                href="#"
-                className="flex items-center justify-center hover:bg-gray-50 transition-colors"
-              >
-                <Image src="/twitter.png" alt="Twitter" width={26} height={26} />
               </Link>
             </div>
           </div>
@@ -163,7 +161,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/terms-and-conditions" className="text-black hover:text-red-400 text-md transition-colors">
+                <Link href="/terms-&-conditions" className="text-black hover:text-red-400 text-md transition-colors">
                   Terms & Conditions
                 </Link>
               </li>

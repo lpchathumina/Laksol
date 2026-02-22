@@ -3,8 +3,9 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { Facebook, Twitter, Linkedin, Youtube } from 'lucide-react';
+import { Facebook } from 'lucide-react';
 import { Variants } from 'framer-motion';
+import { BsWhatsapp } from 'react-icons/bs';
 
 const ContactUs: React.FC = () => {
   const [heroLoaded, setHeroLoaded] = useState(false);
@@ -160,8 +161,8 @@ const ContactUs: React.FC = () => {
               <motion.div variants={contentItem}>
                 <h3 className="text-base font-semibold text-black mb-3">Call Center</h3>
                 <div className="space-y-1">
-                  <p className="text-gray-500 text-sm">+94 11 234 5678</p>
-                  <p className="text-gray-500 text-sm">+94 77 123 4567</p>
+                  <p className="text-gray-500 text-sm">(047) 222 5356</p>
+                  <p className="text-gray-500 text-sm">+94 77 687 3199</p>
                 </div>
               </motion.div>
 
@@ -169,15 +170,15 @@ const ContactUs: React.FC = () => {
               <motion.div variants={contentItem}>
                 <h3 className="text-base font-semibold text-black mb-3">Our Location</h3>
                 <div className="space-y-1">
-                  <p className="text-gray-500 text-sm">No. 45, Industrial Zone</p>
-                  <p className="text-gray-500 text-sm">Colombo, Sri Lanka</p>
+                  <p className="text-gray-500 text-sm">Godawaya Temple Road</p>
+                  <p className="text-gray-500 text-sm">Ambalantota, Sri Lanka</p>
                 </div>
               </motion.div>
 
               {/* Email */}
               <motion.div variants={contentItem}>
                 <h3 className="text-base font-semibold text-black mb-3">Email</h3>
-                <p className="text-gray-500 text-sm">info@lakminaproducts.com</p>
+                <p className="text-gray-500 text-sm">support@lakmina.com</p>
               </motion.div>
 
               {/* Social Network */}
@@ -186,31 +187,21 @@ const ContactUs: React.FC = () => {
                 <div className="flex gap-4">
                   <a 
                     href="#" 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-gray-500 hover:text-black transition-colors"
                     aria-label="Facebook"
                   >
                     <Facebook size={18} />
                   </a>
                   <a 
-                    href="#" 
+                    href="https://wa.me/94776873199" 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-gray-500 hover:text-black transition-colors"
-                    aria-label="Twitter"
+                    aria-label="WhatsApp"
                   >
-                    <Twitter size={18} />
-                  </a>
-                  <a 
-                    href="#" 
-                    className="text-gray-500 hover:text-black transition-colors"
-                    aria-label="LinkedIn"
-                  >
-                    <Linkedin size={18} />
-                  </a>
-                  <a 
-                    href="#" 
-                    className="text-gray-500 hover:text-black transition-colors"
-                    aria-label="YouTube"
-                  >
-                    <Youtube size={18} />
+                    <BsWhatsapp size={18} />
                   </a>
                 </div>
               </motion.div>
@@ -284,7 +275,7 @@ const ContactUs: React.FC = () => {
               <div className="pt-4">
                 <button
                   type="submit"
-                  className="bg-gray-900 text-white px-6 py-3 rounded-full hover:bg-black transition-colors flex items-center gap-2 text-sm font-medium"
+                  className="bg-red-500 text-white px-6 py-3 rounded-full hover:bg-red-700 transition-colors flex items-center gap-2 text-sm font-medium"
                 >
                   <span className="text-base">›</span>
                   <span>Send a message</span>

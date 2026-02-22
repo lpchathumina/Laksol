@@ -3,7 +3,8 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { motion, Variants, AnimatePresence } from 'framer-motion';
-import { Eye, ShoppingBag, ChevronRight } from 'lucide-react';
+import { Eye, ShoppingBag, ChevronRight, ShoppingCart } from 'lucide-react';
+import Link from 'next/link';
 
 const heroList: Variants = {
   visible: {
@@ -36,11 +37,11 @@ const productCategories = [
     detailImage: "/deg.jpg",
     detailText: "Range hoods, fryers, ovens, walls and other tough greasy surfaces need a heavy duty degreaser to clean. These areas should be cleaned as needed. Rubbish and grease bins should be cleaned weekly.",
     products: [
-      { id: 1, name: "Power Degreaser Pro", size: "800mL", image: "/k.png" },
-      { id: 2, name: "Kitchen Cleaner Ultra", size: "800mL", image: "/k.png" },
-      { id: 3, name: "Grease Buster Max", size: "800mL", image: "/k.png" },
-      { id: 4, name: "Surface Degreaser", size: "800mL", image: "/k.png" },
-      { id: 5, name: "Oven & Grill Cleaner", size: "800mL", image: "/k.png" }
+      { id: 1, name: "Power Degreaser Pro", size: "800mL", image: "/k.png", price: "7500" },
+      { id: 2, name: "Kitchen Cleaner Ultra", size: "800mL", image: "/k.png", price: "7500" },
+      { id: 3, name: "Grease Buster Max", size: "800mL", image: "/k.png", price: "7500" },
+      { id: 4, name: "Surface Degreaser", size: "800mL", image: "/k.png", price: "7500" },
+      { id: 5, name: "Oven & Grill Cleaner", size: "800mL", image: "/k.png", price: "7500" }
     ]
   },
   {
@@ -49,62 +50,62 @@ const productCategories = [
     subtitle: "MANUAL AND AUTO DISHWASHING SOLUTIONS FOR SPARKLING CLEANLINESS",
     heroImage: "/Dishwashing.jpg",
     detailTitle: "Dishwashing",
-    detailImage: "/dishwashing.jpg",
+    detailImage: "/dish.jpg",
     detailText: "Range hoods, fryers, ovens, walls and other tough greasy surfaces need a heavy duty degreaser to clean. These areas should be cleaned as needed. Rubbish and grease bins should be cleaned weekly.",
     products: [
-      { id: 1, name: "Power Degreaser Pro", size: "800mL", image: "/k.png" },
-      { id: 2, name: "Kitchen Cleaner Ultra", size: "800mL", image: "/k.png" },
-      { id: 3, name: "Grease Buster Max", size: "800mL", image: "/k.png" },
-      { id: 4, name: "Surface Degreaser", size: "800mL", image: "/k.png" },
-      { id: 5, name: "Oven & Grill Cleaner", size: "800mL", image: "/k.png" }
+      { id: 1, name: "Power Degreaser Pro", size: "800mL", image: "/k.png", price: "7500" },
+      { id: 2, name: "Kitchen Cleaner Ultra", size: "800mL", image: "/k.png", price: "7500" },
+      { id: 3, name: "Grease Buster Max", size: "800mL", image: "/k.png", price: "7500" },
+      { id: 4, name: "Surface Degreaser", size: "800mL", image: "/k.png", price: "7500" },
+      { id: 5, name: "Oven & Grill Cleaner", size: "800mL", image: "/k.png", price: "7500" }
     ]
   },
   {
     id: 'handwash',
     title: "Handwash Products",
     subtitle: "GENTLE YET EFFECTIVE HAND CLEANSING FOR EVERYDAY HYGIENE",
-    heroImage: "/handwash.jpg",
+    heroImage: "/handwash2.jpg",
     detailTitle: "Handwash",
     detailImage: "/handwash.jpg",
     detailText: "Range hoods, fryers, ovens, walls and other tough greasy surfaces need a heavy duty degreaser to clean. These areas should be cleaned as needed. Rubbish and grease bins should be cleaned weekly.",
     products: [
-      { id: 1, name: "Power Degreaser Pro", size: "800mL", image: "/k.png" },
-      { id: 2, name: "Kitchen Cleaner Ultra", size: "800mL", image: "/k.png" },
-      { id: 3, name: "Grease Buster Max", size: "800mL", image: "/k.png" },
-      { id: 4, name: "Surface Degreaser", size: "800mL", image: "/k.png" },
-      { id: 5, name: "Oven & Grill Cleaner", size: "800mL", image: "/k.png" }
+      { id: 1, name: "Power Degreaser Pro", size: "800mL", image: "/k.png", price: "7500" },
+      { id: 2, name: "Kitchen Cleaner Ultra", size: "800mL", image: "/k.png", price: "7500" },
+      { id: 3, name: "Grease Buster Max", size: "800mL", image: "/k.png", price: "7500" },
+      { id: 4, name: "Surface Degreaser", size: "800mL", image: "/k.png", price: "7500" },
+      { id: 5, name: "Oven & Grill Cleaner", size: "800mL", image: "/k.png", price: "7500" }
     ]
   },
   {
     id: 'high-pressure',
     title: "High Pressure Products",
     subtitle: "POWERFUL CLEANING SOLUTIONS FOR HIGH-PRESSURE WASHING SYSTEMS",
-    heroImage: "/high-pressure.jpg",
+    heroImage: "/carwash.jpg",
     detailTitle: "High Pressure",
-    detailImage: "/high-pressure.jpg",
+    detailImage: "/high.jpg",
     detailText: "Our high-pressure cleaning products are specially formulated to work with pressure washing equipment, delivering superior cleaning results on a variety of surfaces. Ideal for vehicles, buildings, and industrial equipment.",
     products: [
-      { id: 1, name: "Power Degreaser Pro", size: "800mL", image: "/k.png" },
-      { id: 2, name: "Kitchen Cleaner Ultra", size: "800mL", image: "/k.png" },
-      { id: 3, name: "Grease Buster Max", size: "800mL", image: "/k.png" },
-      { id: 4, name: "Surface Degreaser", size: "800mL", image: "/k.png" },
-      { id: 5, name: "Oven & Grill Cleaner", size: "800mL", image: "/k.png" }
+      { id: 1, name: "Power Degreaser Pro", size: "800mL", image: "/k.png", price: "7500" },
+      { id: 2, name: "Kitchen Cleaner Ultra", size: "800mL", image: "/k.png", price: "7500" },
+      { id: 3, name: "Grease Buster Max", size: "800mL", image: "/k.png", price: "7500" },
+      { id: 4, name: "Surface Degreaser", size: "800mL", image: "/k.png", price: "7500" },
+      { id: 5, name: "Oven & Grill Cleaner", size: "800mL", image: "/k.png", price: "7500" }
     ]
   },
   {
     id: 'toilet-cleaner',
     title: "Toilet Cleaner Products",
     subtitle: "POWERFUL TOILET CLEANERS FOR A HYGIENIC AND FRESH RESTROOM ENVIRONMENT",
-    heroImage: "/toilet-cleaner.jpg",
+    heroImage: "/toilet1.jpg",
     detailTitle: "Toilet Cleaner",
-    detailImage: "/toilet-cleaner.jpg",
+    detailImage: "/toilet.jpg",
     detailText: "Our toilet cleaners are formulated to tackle tough stains, limescale, and germs, leaving your toilet sparkling clean and fresh. Effective for both regular maintenance and deep cleaning.",
     products: [
-      { id: 1, name: "Power Degreaser Pro", size: "800mL", image: "/k.png" },
-      { id: 2, name: "Kitchen Cleaner Ultra", size: "800mL", image: "/k.png" },
-      { id: 3, name: "Grease Buster Max", size: "800mL", image: "/k.png" },
-      { id: 4, name: "Surface Degreaser", size: "800mL", image: "/k.png" },
-      { id: 5, name: "Oven & Grill Cleaner", size: "800mL", image: "/k.png" }
+      { id: 1, name: "Power Degreaser Pro", size: "800mL", image: "/k.png", price: "7500" },
+      { id: 2, name: "Kitchen Cleaner Ultra", size: "800mL", image: "/k.png", price: "7500" },
+      { id: 3, name: "Grease Buster Max", size: "800mL", image: "/k.png", price: "7500" },
+      { id: 4, name: "Surface Degreaser", size: "800mL", image: "/k.png", price: "7500" },
+      { id: 5, name: "Oven & Grill Cleaner", size: "800mL", image: "/k.png", price: "7500" }
     ]
   }
 ];
@@ -178,7 +179,7 @@ export default function ProductsPage() {
                     className={`
                       relative pb-3 text-sm md:text-base font-medium whitespace-nowrap transition-all duration-300
                       ${activeCategory === category.id 
-                        ? 'text-orange-500' 
+                        ? 'text-red-500' 
                         : 'text-gray-500 hover:text-gray-700'}
                     `}
                   >
@@ -188,7 +189,7 @@ export default function ProductsPage() {
                     {activeCategory === category.id && (
                       <motion.div
                         layoutId="underline"
-                        className="absolute bottom-0 left-0 right-0 h-1 bg-orange-500 rounded-full"
+                        className="absolute bottom-0 left-0 right-0 h-1 bg-red-500 rounded-full"
                         transition={{ type: "spring", stiffness: 300, damping: 30 }}
                       />
                     )}
@@ -261,48 +262,49 @@ export default function ProductsPage() {
                 </p>
               </motion.div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8">
                 {currentCategory.products.map((product, index) => (
                   <motion.div
                     key={`${currentCategory.id}-${product.id}`}
-                    initial={{ opacity: 0, y: 15 }}
+                    initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ delay: index * 0.05 }}
-                    className="group bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200 hover:shadow-lg transition-all duration-300"
+                    transition={{ duration: 0.3, delay: index * 0.05 }}
+                    className="group relative bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col"
                   >
-                    {/* Product Image */}
-                    <div className="relative h-56 bg-gray-50 overflow-hidden flex items-center justify-center">
-                      <div className="w-4/5 h-4/5 relative transition-transform duration-300 group-hover:scale-105">
+                    {/* Image Area */}
+                    <div className="relative h-[280px] p-8 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white overflow-hidden">
+                      <div className="absolute top-0 right-0 w-40 h-40 bg-red-100/30 rounded-full blur-3xl -mr-10 -mt-10 transition-all duration-500 group-hover:bg-red-200/40" />
+                      
+                      <div className="relative w-full h-full transition-transform duration-500 group-hover:scale-110 z-10">
                         <Image
                           src={product.image}
                           alt={product.name}
                           fill
-                          className="object-contain"
+                          className="object-contain drop-shadow-sm"
                         />
                       </div>
 
-                      {/* Hover Overlay */}
-                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100">
-                        <button className="transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 bg-gray-900 hover:bg-black text-white px-5 py-2 rounded-lg font-medium text-xs md:text-sm flex items-center gap-2 shadow-md">
-                          <Eye size={16} />
-                          View
+                      {/* Overlay Actions */}
+                      <div className="absolute inset-0 bg-black/5 backdrop-blur-[1px] opacity-0 group-hover:opacity-100 transition-all duration-300 z-20 flex flex-col items-center justify-center gap-3">
+                        <button className="transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 bg-red-600 hover:bg-red-900 text-white px-6 py-2.5 rounded-full font-bold text-sm flex items-center gap-2 shadow-lg">
+                          <ShoppingCart size={16} />
+                          Buy Now
                         </button>
                       </div>
                     </div>
 
-                    {/* Product Info */}
-                    <div className="p-5 md:p-6">
-                      <h3 className="font-semibold text-gray-900 text-sm md:text-base leading-snug mb-3 line-clamp-2">
+                    {/* Details Area */}
+                    <div className="p-6 flex-1 flex flex-col">
+                      <h3 className="font-bold text-gray-900 text-lg mb-2 line-clamp-2 group-hover:text-red-500 transition-colors" title={product.name}>
                         {product.name}
                       </h3>
-                      <div className="flex items-center justify-between">
-                        <p className="text-gray-500 text-xs md:text-sm font-medium">
+                      <div className="mt-auto flex items-center justify-between">
+                        <div className="flex items-center gap-2 text-sm text-gray-500 font-medium bg-gray-50 px-3 py-1.5 rounded-full border border-gray-100">
+                          <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
                           {product.size}
-                        </p>
-                        <button className="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-gray-900 hover:text-white transition-all duration-200">
-                          <ChevronRight size={16} />
-                        </button>
+                        </div>
+                        <span className="font-bold text-[#1a0a5c]">LKR {product.price}</span>
                       </div>
                     </div>
                   </motion.div>
