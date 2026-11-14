@@ -47,7 +47,7 @@ const Counter = ({ end, duration = 2000, suffix = '', decimals = 0 }: CounterPro
     const animate = (currentTime: number) => {
       if (!startTime) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / duration, 1);
-      
+
       const currentValue = progress * end;
       setCount(decimals > 0 ? parseFloat(currentValue.toFixed(decimals)) : Math.floor(currentValue));
 
@@ -171,38 +171,37 @@ const AboutUsPage = () => {
             variants={heroList}
             className="text-center"
           >
-            <motion.h1 
-              variants={heroShow} 
+            <motion.h1
+              variants={heroShow}
               className="text-white text-4xl sm:text-5xl md:text-6xl md:mt-24 font-bold tracking-tight leading-tight"
             >
               ABOUT US
             </motion.h1>
 
-            <motion.p 
-              variants={heroShow} 
+            <motion.p
+              variants={heroShow}
               className="mt-4 max-w-xl mx-auto text-white/90 text-base md:text-lg leading-relaxed"
             >
               Discover the story behind Lakmina Products – over 14 years of excellence in manufacturing premium cleaning solutions for homes and businesses.
             </motion.p>
           </motion.div>
-        </div> 
+        </div>
       </section>
 
       {/* Content Section - Committed to Excellence */}
-      <section 
+      <section
         ref={sectionRef}
         className="bg-white py-16 md:py-24 lg:py-32"
       >
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-            
+
             <div className="space-y-6">
-              <h2 
-                className={`text-4xl md:text-5xl lg:text-6xl font-bold text-black leading-tight transition-all duration-700 ${
-                  isVisible 
-                    ? 'opacity-100 translate-y-0' 
+              <h2
+                className={`text-4xl md:text-5xl lg:text-6xl font-bold text-black leading-tight transition-all duration-700 ${isVisible
+                    ? 'opacity-100 translate-y-0'
                     : 'opacity-0 translate-y-8'
-                }`}
+                  }`}
                 style={{ transitionDelay: '100ms' }}
               >
                 COMMITTED TO
@@ -210,12 +209,11 @@ const AboutUsPage = () => {
                 EXCELLENCE
               </h2>
 
-              <p 
-                className={`text-md md:text-3xl text-black leading-relaxed font-light italic transition-all duration-700 ${
-                  isVisible 
-                    ? 'opacity-100 translate-y-0' 
+              <p
+                className={`text-md md:text-3xl text-black leading-relaxed font-light italic transition-all duration-700 ${isVisible
+                    ? 'opacity-100 translate-y-0'
                     : 'opacity-0 translate-y-8'
-                }`}
+                  }`}
                 style={{ transitionDelay: '300ms' }}
               >
                 We carry a passion for quality cleaning solutions and have a knack for delivering products that exceed expectations.
@@ -223,34 +221,31 @@ const AboutUsPage = () => {
             </div>
 
             <div className="space-y-6 lg:pt-4">
-              <p 
-                className={`text-black text-base md:text-lg leading-relaxed transition-all duration-700 ${
-                  isVisible 
-                    ? 'opacity-100 translate-y-0' 
+              <p
+                className={`text-black text-base md:text-lg leading-relaxed transition-all duration-700 ${isVisible
+                    ? 'opacity-100 translate-y-0'
                     : 'opacity-0 translate-y-8'
-                }`}
+                  }`}
                 style={{ transitionDelay: '200ms' }}
               >
                 We believe in developing innovative formulations and turning them into cleaning products that are both effective and environmentally responsible.
               </p>
 
-              <p 
-                className={`text-black  text-base md:text-lg leading-relaxed transition-all duration-700 ${
-                  isVisible 
-                    ? 'opacity-100 translate-y-0' 
+              <p
+                className={`text-black  text-base md:text-lg leading-relaxed transition-all duration-700 ${isVisible
+                    ? 'opacity-100 translate-y-0'
                     : 'opacity-0 translate-y-8'
-                }`}
+                  }`}
                 style={{ transitionDelay: '400ms' }}
               >
                 Taking on challenging projects that push us to innovate and go the extra mile is what we consider a way of life at Lakmina Products.
               </p>
 
-              <p 
-                className={`text-black text-base md:text-lg leading-relaxed transition-all duration-700 ${
-                  isVisible 
-                    ? 'opacity-100 translate-y-0' 
+              <p
+                className={`text-black text-base md:text-lg leading-relaxed transition-all duration-700 ${isVisible
+                    ? 'opacity-100 translate-y-0'
                     : 'opacity-0 translate-y-8'
-                }`}
+                  }`}
                 style={{ transitionDelay: '600ms' }}
               >
                 We are relentless in pushing boundaries and carry out this spirited attitude into every product we create. Cleaning solutions that perform, protect, and make a difference. Make your space shine.
@@ -260,68 +255,68 @@ const AboutUsPage = () => {
         </div>
       </section>
 
-        {/* Stats Section */}
-        <section className="bg-white py-10 md:py-10 mb-40">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-        
-        <div className="lg:col-span-3">
-          <div className="space-y-0">
-            <div className="text-center py-6 border-b border-gray-200">
-              <div className="text-4xl md:text-5xl font-bold text-black mb-1">
-                <Counter end={1.5} suffix="k" decimals={1} />
+      {/* Stats Section */}
+      <section className="bg-white py-10 md:py-10 mb-40">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+
+            <div className="lg:col-span-3">
+              <div className="space-y-0">
+                <div className="text-center py-6 border-b border-gray-200">
+                  <div className="text-4xl md:text-5xl font-bold text-black mb-1">
+                    <Counter end={1.5} suffix="k" decimals={1} />
+                  </div>
+                  <div className="text-gray-500 text-sm">Successfully Delivered</div>
+                </div>
+
+                <div className="text-center py-6 border-b border-gray-200">
+                  <div className="text-4xl md:text-5xl font-bold text-black mb-1">
+                    <Counter end={50} suffix="+" />
+                  </div>
+                  <div className="text-gray-500 text-sm">Happy Customers</div>
+                </div>
+
+                <div className="text-center py-6">
+                  <div className="text-4xl md:text-5xl font-bold text-black mb-1">
+                    <Counter end={14} suffix="+" />
+                  </div>
+                  <div className="text-gray-500 text-sm">Years Experience</div>
+                </div>
               </div>
-              <div className="text-gray-500 text-sm">Successfully Delivered</div>
             </div>
 
-            <div className="text-center py-6 border-b border-gray-200">
-              <div className="text-4xl md:text-5xl font-bold text-black mb-1">
-                <Counter end={50} suffix="+" />
+            <div className="lg:col-span-5">
+              <div className="relative">
+                <div className="relative w-full h-[350px] md:h-[450px] rounded-2xl overflow-hidden shadow-xl mt-8 lg:mt-0">
+                  <Image
+                    src="/12345.jpg"
+                    alt="Lakmina Products Team"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
               </div>
-              <div className="text-gray-500 text-sm">Happy Customers</div>
             </div>
 
-            <div className="text-center py-6">
-              <div className="text-4xl md:text-5xl font-bold text-black mb-1">
-                <Counter end={14} suffix="+" />
+            <div className="lg:col-span-4 lg:mt-26 space-y-6 ">
+              <div className="flex items-center gap-2">
+                <svg className="w-4 h-4 text-red-600" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg>
+                <span className="text-red-600 text-sm font-medium tracking-wider uppercase">About Company</span>
               </div>
-              <div className="text-gray-500 text-sm">Years Experience</div>
+
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                Quality products & their best solutions
+              </h2>
+
+              <p className="text-black text-base leading-relaxed">
+                Our comprehensive range of cleaning products is designed to tackle every cleaning challenge. From powerful bathroom cleaners to gentle surface sprays, each product is formulated with care and precision to deliver exceptional results.
+              </p>
             </div>
           </div>
         </div>
-
-        <div className="lg:col-span-5">
-          <div className="relative">
-            <div className="relative w-full h-[350px] md:h-[450px] rounded-2xl overflow-hidden shadow-xl mt-8 lg:mt-0">
-              <Image
-                src="/12345.jpg"
-                alt="Lakmina Products Team"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </div>
-        </div>
-
-        <div className="lg:col-span-4 lg:mt-26 space-y-6 ">
-          <div className="flex items-center gap-2">
-            <svg className="w-4 h-4 text-red-600" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-            </svg>
-            <span className="text-red-600 text-sm font-medium tracking-wider uppercase">About Company</span>
-          </div>
-
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-            Quality products & their best solutions
-          </h2>
-
-          <p className="text-black text-base leading-relaxed">
-            Our comprehensive range of cleaning products is designed to tackle every cleaning challenge. From powerful bathroom cleaners to gentle surface sprays, each product is formulated with care and precision to deliver exceptional results.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
       <GrowUp1 />
 
@@ -392,9 +387,9 @@ const AboutUsPage = () => {
       {/* Core Values Scroll Section */}
       {/* <section className="relative w-full bg-white">
         <div className="flex flex-col lg:flex-row"> */}
-          
-          {/* Left Side - Sticky Image */}
-          {/* <div className="lg:w-1/2 h-[50vh] lg:h-screen sticky top-0 flex flex-col justify-between overflow-hidden">
+
+      {/* Left Side - Sticky Image */}
+      {/* <div className="lg:w-1/2 h-[50vh] lg:h-screen sticky top-0 flex flex-col justify-between overflow-hidden">
             <div className="absolute inset-0 z-0">
               <Image
                 src={coreValuesSections[activeFeature].image}
@@ -406,8 +401,8 @@ const AboutUsPage = () => {
             </div>
           </div> */}
 
-          {/* Right Side - Scrollable Content */}
-          {/* <div className="lg:w-1/2 relative bg-white">
+      {/* Right Side - Scrollable Content */}
+      {/* <div className="lg:w-1/2 relative bg-white">
             <div className="flex flex-col">
               {coreValuesSections.map((section, index) => (
                 <div 
