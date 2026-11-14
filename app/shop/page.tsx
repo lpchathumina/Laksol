@@ -3,7 +3,7 @@
 import React, { useState, useMemo } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
-import { Search, ChevronLeft, ChevronRight, ShoppingBag, X, ShoppingCart } from 'lucide-react';
+import { Search, ChevronLeft, ChevronRight, X, ShoppingCart } from 'lucide-react';
 import Link from 'next/link';
 
 import { allProducts as products } from './product-data';
@@ -180,7 +180,7 @@ export default function ShopPage() {
                   ))}
                   {filteredProducts.length === 0 && (
                     <div className="px-6 py-8 text-center text-gray-500">
-                      <p>No products found matching "{searchQuery}"</p>
+                      <p>No products found matching &quot;{searchQuery}&quot;</p>
                     </div>
                   )}
                 </div>
@@ -255,7 +255,7 @@ export default function ShopPage() {
               <Search size={32} />
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-2">No products found</h3>
-            <p className="text-gray-500">We couldn't find any products matching "{searchQuery}"</p>
+            <p className="text-gray-500">We couldn&apos;t find any products matching &quot;{searchQuery}&quot;</p>
             <button 
               onClick={() => { setSearchQuery(''); }}
               className="mt-6 text-[#2727f6] font-semibold hover:underline"

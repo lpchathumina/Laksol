@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { motion, Variants, AnimatePresence } from 'framer-motion';
-import { Eye, ShoppingBag, ChevronRight, ShoppingCart } from 'lucide-react';
+import { ShoppingCart } from 'lucide-react';
 import Link from 'next/link';
 
 const heroList: Variants = {

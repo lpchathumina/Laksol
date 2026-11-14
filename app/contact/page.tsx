@@ -123,7 +123,7 @@ const ContactUs: React.FC = () => {
               variants={heroShow} 
               className="mt-4 max-w-xl mx-auto text-white/90 text-base md:text-lg leading-relaxed"
             >
-              We'd love to hear from you. Reach out to our team for inquiries, partnerships, or support.
+              We&apos;d love to hear from you. Reach out to our team for inquiries, partnerships, or support.
             </motion.p>
           </motion.div>
         </div> 
@@ -298,7 +298,7 @@ const ContactUs: React.FC = () => {
           <motion.div variants={contentItem} className="mb-10">
             <h2 className="text-3xl md:text-4xl font-bold text-black mb-3">Visit Our Office</h2>
             <p className="text-gray-400 text-sm max-w-2xl">
-              Find us at our headquarters in Colombo, Sri Lanka. We're located in the heart of the industrial zone.
+              Find us at our headquarters in Colombo, Sri Lanka. We&apos;re located in the heart of the industrial zone.
             </p>
           </motion.div>
 

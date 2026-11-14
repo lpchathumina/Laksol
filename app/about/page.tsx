@@ -3,8 +3,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
-import { Target, Eye, Heart, ShieldCheck } from 'lucide-react';
 import GrowUp1 from '@/components/layout/growup1';
 import Book from '@/components/layout/book';
 import Feedback from '@/components/layout/feedback';
@@ -98,35 +96,9 @@ const Counter = ({ end, duration = 2000, suffix = '', decimals = 0 }: CounterPro
 //   }
 // ];
 
-const coreValuesSections = [
-  {
-    id: 1,
-    title: "MISSION",
-    description: "Our mission is to provide high-quality cleaning solutions that ensure safety and hygiene for families and businesses alike. We strive for excellence in every drop.",
-    icon: Target,
-    image: "/mission.jpg",
-  },
-  {
-    id: 2,
-    title: "VISION",
-    description: "To be the global leader in sustainable hygiene products, setting the standard for innovation, effectiveness, and environmental responsibility.",
-    icon: Eye,
-    image: "/vision.jpg",
-  },
-  {
-    id: 3,
-    title: "VALUES",
-    description: "Integrity, Transparency, and Customer Focus. We believe in building trust through consistent quality and honest practices.",
-    icon: Heart,
-    image: "/values.jpg",
-  },
-];
-
 const AboutUsPage = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [activeFeature, setActiveFeature] = useState(0);
   const sectionRef = useRef<HTMLElement>(null);
-  const coreValuesRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const heroList = {
     visible: {
@@ -150,6 +122,7 @@ const AboutUsPage = () => {
   };
 
   useEffect(() => {
+    const currentRef = sectionRef.current;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -159,33 +132,15 @@ const AboutUsPage = () => {
       { threshold: 0.2 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
-  }, []);
-
-  useEffect(() => {
-    const observers = coreValuesRefs.current.map((ref, index) => {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            setActiveFeature(index);
-          }
-        },
-        { rootMargin: '-50% 0px -50% 0px' }
-      );
-
-      if (ref) observer.observe(ref);
-      return observer;
-    });
-
-    return () => observers.forEach(observer => observer.disconnect());
   }, []);
 
   return (
