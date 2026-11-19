@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 
 export default function Navbar() {
@@ -46,9 +47,12 @@ export default function Navbar() {
           {/* --- MIDDLE LOGO --- */}
           <div className="flex items-center justify-center">
             <Link href="/">
-              <img 
+              <Image 
                 src="/laksol.png" 
                 alt="Logo" 
+                width={120}
+                height={40}
+                priority
                 className="h-10 w-auto object-contain" 
               />
             </Link>

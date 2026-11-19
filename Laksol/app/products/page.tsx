@@ -45,7 +45,7 @@ export default function ProductsPage() {
           transition={{ duration: 0.3 }}
         >
           {/* Hero Section */}
-          <section className="relative isolate h-[50vh] md:h-[70vh] overflow-hidden">
+          <section className="relative isolate h-[30vh] min-h-[260px] md:h-[60vh] md:min-h-[420px] overflow-hidden">
             <motion.div
               initial={{ scale: 1.05 }}
               animate={{ scale: 1 }}
@@ -61,9 +61,9 @@ export default function ProductsPage() {
               />
             </motion.div>
 
-            <div className="absolute inset-0 bg-gradient-to-b from-black/35 to-black/50" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60" />
 
-            <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-center px-6 sm:px-8">
+            <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 md:pt-24 pb-4 sm:pb-6">
               <motion.div
                 initial="hidden"
                 animate="visible"
@@ -79,7 +79,7 @@ export default function ProductsPage() {
 
                 <motion.p 
                   variants={heroShow} 
-                  className="mt-3 max-w-4xl mx-auto text-white/85 text-sm md:text-base leading-relaxed"
+                  className="mt-2 sm:mt-3 max-w-4xl mx-auto text-white/85 text-xs sm:text-sm md:text-base leading-relaxed"
                 >
                   {currentCategory.subtitle}
                 </motion.p>
@@ -89,7 +89,7 @@ export default function ProductsPage() {
 
           {/* Category Navigation - After Hero Section */}
           <section className="bg-white border-b border-gray-100">
-            <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-8 sm:py-12 md:py-16">
               <div className="flex justify-start md:justify-center gap-8 md:gap-12 overflow-x-auto pb-4 md:pb-0">
                 {productCategories.map((category) => (
                   <button

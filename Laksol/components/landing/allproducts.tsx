@@ -46,7 +46,7 @@ export default function ServicesGrid() {
             </div>
             <div className="w-full h-[240px]">
               <div className="relative overflow-hidden rounded-3xl group cursor-pointer w-full h-full border border-white/5 transition-all duration-500 hover:shadow-2xl hover:scale-[1.02] hover:border-[#FF6BFF]/40 hover:shadow-[0_20px_60px_rgba(255,107,255,0.15)]">
-                <Image src="/floorcare.jpg" alt="Floor Care" fill className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 brightness-50 group-hover:brightness-75 saturate-50 group-hover:saturate-110" />
+                <Image src="/care-home.jpg" alt="Floor Care" fill className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 brightness-50 group-hover:brightness-75 saturate-50 group-hover:saturate-110" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent group-hover:from-black/80" />
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ background: 'radial-gradient(circle at bottom left, rgba(255,107,255,0.15) 0%, transparent 70%)' }} />
                 <div className="absolute top-4 left-4 w-7 h-7 border-t-2 border-l-2 border-white/15 rounded-tl-lg transition-all duration-300 group-hover:border-[#FF6BFF]/60 group-hover:scale-110" />

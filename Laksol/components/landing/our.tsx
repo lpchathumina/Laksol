@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 
 export default function OurServices() {
   const [isVisible, setIsVisible] = useState(false);
@@ -91,9 +92,11 @@ export default function OurServices() {
                   style={{ transitionDelay: `${400 + index * 150}ms` }}
                 >
                   <div className="text-gray-900 mb-4">
-                    <img 
+                    <Image 
                       src={service.image} 
                       alt={service.title} 
+                      width={80}
+                      height={80}
                       className="w-20 h-20 object-contain"
                     />
                   </div>
@@ -127,9 +130,11 @@ export default function OurServices() {
                   style={{ transitionDelay: `${1000 + index * 150}ms` }}
                 >
                   <div className="text-gray-900 mb-4">
-                    <img 
+                    <Image 
                       src={service.image} 
                       alt={service.title} 
+                      width={80}
+                      height={80}
                       className="w-20 h-20 object-contain"
                     />
                   </div>

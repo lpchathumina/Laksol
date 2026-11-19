@@ -146,7 +146,7 @@ const AboutUsPage = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative isolate h-[60vh] md:h-[90vh] overflow-hidden">
+      <section className="relative isolate h-[30vh] min-h-[260px] md:h-[60vh] md:min-h-[420px] overflow-hidden">
         <motion.div
           initial={{ scale: 1.08 }}
           animate={{ scale: 1 }}
@@ -162,9 +162,9 @@ const AboutUsPage = () => {
           />
         </motion.div>
 
-        <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60" />
 
-        <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-center px-6 sm:px-8">
+        <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 md:pt-24 pb-4 sm:pb-6">
           <motion.div
             initial="hidden"
             animate="visible"
@@ -173,14 +173,14 @@ const AboutUsPage = () => {
           >
             <motion.h1
               variants={heroShow}
-              className="text-white text-4xl sm:text-5xl md:text-6xl md:mt-24 font-bold tracking-tight leading-tight"
+              className="text-white text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight"
             >
               ABOUT US
             </motion.h1>
 
             <motion.p
               variants={heroShow}
-              className="mt-4 max-w-xl mx-auto text-white/90 text-base md:text-lg leading-relaxed"
+              className="mt-2 sm:mt-4 max-w-xl mx-auto text-white/90 text-xs sm:text-base md:text-lg leading-relaxed"
             >
               Discover the story behind Lakmina Products – over 14 years of excellence in manufacturing premium cleaning solutions for homes and businesses.
             </motion.p>
@@ -289,7 +289,7 @@ const AboutUsPage = () => {
               <div className="relative">
                 <div className="relative w-full h-[350px] md:h-[450px] rounded-2xl overflow-hidden shadow-xl mt-8 lg:mt-0">
                   <Image
-                    src="/12345.jpg"
+                    src="/about.jpg"
                     alt="Lakmina Products Team"
                     fill
                     className="object-cover"
@@ -349,7 +349,7 @@ const AboutUsPage = () => {
           <div className="relative rounded-3xl overflow-hidden">
             <div className="absolute inset-0">
               <Image
-                src="/timeline-bg.jpg"
+                src="/about.jpg"
                 alt="Timeline Background"
                 fill
                 className="object-cover"

@@ -40,7 +40,7 @@ const Book = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/21064.jpg"
+          src="/products3.jpg"
           alt="Lakmina Products Manufacturing Facility"
           fill
           priority

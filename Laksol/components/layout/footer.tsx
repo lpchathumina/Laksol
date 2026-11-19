@@ -95,7 +95,7 @@ const Footer = () => {
           <div className="lg:col-span-4">
             <div className="flex items-center gap-1 mb-4">
               <div className="flex items-center justify-center">
-                <img src='/laksol.png' className='h-10 w-24' alt="Logo" />
+                <Image src="/laksol.png" className="h-10 w-auto object-contain" alt="Logo" width={96} height={40} />
               </div>
             </div>
             <p className="text-black text-sm leading-relaxed mb-4">
@@ -119,7 +119,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="flex items-center justify-center hover:bg-gray-50 transition-colors"
               >
-                <Image src="/whatsapp.png" alt="Instagram" width={26} height={26} />
+                <Image src="/whatsapp1.png" alt="WhatsApp" width={26} height={26} />
               </Link>
             </div>
           </div>

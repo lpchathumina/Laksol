@@ -67,7 +67,7 @@ export default function ShopPage() {
   return (
     <main className="w-full bg-white text-black mb-40">
       {/* Hero Section */}
-      <section className="relative isolate h-[60vh] md:h-[90vh] overflow-hidden">
+      <section className="relative isolate h-[30vh] min-h-[260px] md:h-[60vh] md:min-h-[420px] overflow-hidden">
         <motion.div
           initial={{ scale: 1.08 }}
           animate={{ scale: 1 }}
@@ -85,7 +85,7 @@ export default function ShopPage() {
 
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60" />
 
-        <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-center px-6 sm:px-8">
+        <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-center items-center px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 md:pt-24 pb-4 sm:pb-6">
           <motion.div
             initial="hidden"
             animate="visible"
@@ -94,14 +94,14 @@ export default function ShopPage() {
           >
             <motion.h1 
               variants={heroShow} 
-              className="text-white text-4xl sm:text-5xl md:text-6xl md:mt-24 font-bold tracking-tight leading-tight"
+              className="text-white text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight"
             >
               All Products
             </motion.h1>
 
             <motion.p 
               variants={heroShow} 
-              className="mt-4 max-w-5xl mx-auto text-white/90 text-base md:text-lg leading-relaxed"
+              className="mt-2 sm:mt-4 max-w-5xl mx-auto text-white/90 text-xs sm:text-base md:text-lg leading-relaxed"
             >
               HEAVY DUTY KITCHEN DEGREASERS
             </motion.p>
@@ -110,7 +110,7 @@ export default function ShopPage() {
       </section>
 
       {/* Intro Paragraph */}
-      <section className="max-w-7xl mt-20 mx-auto px-4 sm:px-6 lg:px-8 text-center mb-12 relative z-10">
+      <section className="max-w-7xl mt-10 sm:mt-14 md:mt-20 mx-auto px-4 sm:px-6 lg:px-8 text-center mb-12 relative z-10">
         <motion.div
            initial={{ opacity: 0, y: 20 }}
            animate={{ opacity: 1, y: 0 }}
